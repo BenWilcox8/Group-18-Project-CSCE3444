@@ -1,42 +1,1544 @@
 {
   "Accounting, BBA": {
-    "url": "https://catalog.unt.edu/preview_program.php?catoid=37&poid=18512&returnto=4292",
-    "sections": []
+    "url": "https://catalog.unt.edu/preview_program.php?catoid=37&poid=18512",
+    "sections": [
+      {
+        "title": "Overview",
+        "level": 2,
+        "paragraphs": [
+          "In the BBA program with a professional field in accounting, students learn to appraise situations critically, act responsibly and ethically, as well as become strategic thinkers and problem-solvers. Our “learn today, apply tomorrow” classroom philosophy is achieved within an accommodative and supportive learning environment.",
+          "The following requirements must be satisfied for a Bachelor of Business Administration with a professional field in accounting:"
+        ],
+        "lists": [],
+        "subsections": []
+      },
+      {
+        "title": "Bachelor of Business Administration",
+        "level": 2,
+        "paragraphs": [
+          "The department offers the Bachelor of Business Administration with a professional field in accounting. General requirements for the BBA are listed in the University Core Curriculum and the University Core Curriculum Requirements in the Academic policies section and under Bachelor of Business Administration in the G. Brint Ryan College of Business ."
+        ],
+        "lists": [],
+        "subsections": []
+      },
+      {
+        "title": "Professional field in accounting, 25 hours",
+        "level": 2,
+        "paragraphs": [
+          "The following courses are required for the professional field in accounting:",
+          "Note: All students entering ACCT 3110 (Intermediate Accounting I) are required to complete and pass an entrance exam. This policy applies to both UNT students and transfer students. The exam will be administered at least three times a year and the student must obtain a passing grade of at least 70%. The exam will be composed by the full-time financial accounting faculty and administered by the Department of Accounting ."
+        ],
+        "lists": [
+          [
+            {
+              "text": "ACCT 3110 - Intermediate Accounting I (see note below)",
+              "href": "https://catalog.unt.edu/preview_course_nopop.php?catoid=37&coid=170017"
+            },
+            {
+              "text": "ACCT 3120 - Intermediate Accounting II",
+              "href": "https://catalog.unt.edu/preview_course_nopop.php?catoid=37&coid=170018"
+            },
+            {
+              "text": "ACCT 3270 - Cost Accounting",
+              "href": "https://catalog.unt.edu/preview_course_nopop.php?catoid=37&coid=170019"
+            },
+            {
+              "text": "ACCT 3405 - Professional Development",
+              "href": "https://catalog.unt.edu/preview_course_nopop.php?catoid=37&coid=170020"
+            },
+            {
+              "text": "ACCT 4100 - Accounting Systems",
+              "href": "https://catalog.unt.edu/preview_course_nopop.php?catoid=37&coid=170021"
+            },
+            {
+              "text": "ACCT 4140 - Advanced and Not-for-Profit Accounting Principles",
+              "href": "https://catalog.unt.edu/preview_course_nopop.php?catoid=37&coid=170023"
+            },
+            {
+              "text": "ACCT 4300 - Federal Income Taxation",
+              "href": "https://catalog.unt.edu/preview_course_nopop.php?catoid=37&coid=170025"
+            },
+            {
+              "text": "ACCT 4320 - Federal Income Taxation II",
+              "href": "https://catalog.unt.edu/preview_course_nopop.php?catoid=37&coid=173546"
+            },
+            {
+              "text": "ACCT 4400 - Auditing — Professional Responsibilities",
+              "href": "https://catalog.unt.edu/preview_course_nopop.php?catoid=37&coid=170026"
+            },
+            {
+              "text": "Note: All students entering ACCT 3110 (Intermediate Accounting I) are required to complete and pass an entrance exam. This policy applies to both UNT students and transfer students. The exam will be administered at least three times a year and the student must obtain a passing grade of at least 70%. The exam will be composed by the full-time financial accounting faculty and administered by the Department of Accounting .",
+              "href": "https://catalog.unt.edu/preview_course_nopop.php?catoid=37&coid=170017"
+            }
+          ]
+        ],
+        "subsections": []
+      },
+      {
+        "title": "Approved supporting courses, 12 hours",
+        "level": 2,
+        "paragraphs": [
+          "The following courses selected by the student and approved in advance by the faculty advisor include one 3 hour course from each group."
+        ],
+        "lists": [],
+        "subsections": [
+          {
+            "title": "International business course, 3 hours",
+            "level": 3,
+            "paragraphs": [
+              "Choose one from the following:"
+            ],
+            "lists": [
+              [
+                {
+                  "text": "BCIS 4730 - International Issues of Information Technology",
+                  "href": "https://catalog.unt.edu/preview_course_nopop.php?catoid=37&coid=173268"
+                },
+                {
+                  "text": "BLAW 4480 - International Business Law",
+                  "href": "https://catalog.unt.edu/preview_course_nopop.php?catoid=37&coid=170490"
+                },
+                {
+                  "text": "FINA 4500 - International Finance",
+                  "href": "https://catalog.unt.edu/preview_course_nopop.php?catoid=37&coid=171110"
+                },
+                {
+                  "text": "MGMT 4660 - International Management Perspectives",
+                  "href": "https://catalog.unt.edu/preview_course_nopop.php?catoid=37&coid=171781"
+                },
+                {
+                  "text": "MKTG 4280 - Global Marketing Issues and Practice",
+                  "href": "https://catalog.unt.edu/preview_course_nopop.php?catoid=37&coid=171816"
+                }
+              ]
+            ],
+            "subsections": []
+          },
+          {
+            "title": "Approved elective, 3 hours",
+            "level": 3,
+            "paragraphs": [],
+            "lists": [
+              [
+                {
+                  "text": "ACCT 4430 - Accounting Research and Data Analysis",
+                  "href": "https://catalog.unt.edu/preview_course_nopop.php?catoid=37&coid=178244"
+                },
+                {
+                  "text": "or other approved elective"
+                }
+              ]
+            ],
+            "subsections": []
+          },
+          {
+            "title": "Advanced economics, 3 hours",
+            "level": 3,
+            "paragraphs": [
+              "Any 3000- or 4000-level ECON course."
+            ],
+            "lists": [],
+            "subsections": []
+          },
+          {
+            "title": "Creation of goods and services, 3 hours",
+            "level": 3,
+            "paragraphs": [
+              "Choose from:"
+            ],
+            "lists": [
+              [
+                {
+                  "text": "DSCI 3870 - Management Science",
+                  "href": "https://catalog.unt.edu/preview_course_nopop.php?catoid=37&coid=170823"
+                },
+                {
+                  "text": "LSCM 3960 - Logistics and Supply Chain Management",
+                  "href": "https://catalog.unt.edu/preview_course_nopop.php?catoid=37&coid=171588"
+                },
+                {
+                  "text": "OPSM 3830 - Operations Management",
+                  "href": "https://catalog.unt.edu/preview_course_nopop.php?catoid=37&coid=171762"
+                }
+              ]
+            ],
+            "subsections": []
+          }
+        ]
+      }
+    ]
   },
   "Accounting, BS (dual degree; may not be earned without completion of the MS)": {
-    "url": "https://catalog.unt.edu/preview_program.php?catoid=37&poid=18808&returnto=4292",
-    "sections": []
+    "url": "https://catalog.unt.edu/preview_program.php?catoid=37&poid=18808",
+    "sections": [
+      {
+        "title": "Overview",
+        "level": 2,
+        "paragraphs": [
+          "The Bachelor of Science with a major in accounting is offered as part of a dual-degree program with the Master of Science with a major in accounting or the Master of Science with a major in taxation."
+        ],
+        "lists": [],
+        "subsections": []
+      }
+    ]
   },
   "Addiction Studies, BS": {
-    "url": "https://catalog.unt.edu/preview_program.php?catoid=37&poid=18997&returnto=4292",
-    "sections": []
+    "url": "https://catalog.unt.edu/preview_program.php?catoid=37&poid=18997",
+    "sections": [
+      {
+        "title": "Overview",
+        "level": 2,
+        "paragraphs": [
+          "The BS in addiction studies prepares students and professionals who wish to continue career development to work directly with individuals with substance use disorders and process addictions (e.g., gambling, disordered eating, etc.) in order to facilitate long-term recovery, autonomy and improved quality of life.",
+          "Candidates for the Bachelor of Science degree with a major in addiction studies must meet the following requirements."
+        ],
+        "lists": [],
+        "subsections": []
+      },
+      {
+        "title": "Hours required and general/college requirements",
+        "level": 2,
+        "paragraphs": [
+          "A minimum of 120 semester credit hours. Completion of 42 hours in the University Core Curriculum , 36 hours in the major and 12 hours in electives. Students should complete an additional 30 hours of free electives. Prerequisites are given in course descriptions and in the online schedule of classes at www.unt.edu/registrar ."
+        ],
+        "lists": [],
+        "subsections": [
+          {
+            "title": "Major requirements",
+            "level": 3,
+            "paragraphs": [],
+            "lists": [],
+            "subsections": [
+              {
+                "title": "Addiction studies, 30 hours",
+                "level": 4,
+                "paragraphs": [],
+                "lists": [
+                  [
+                    {
+                      "text": "ADDS 3975 - Addictions",
+                      "href": "https://catalog.unt.edu/preview_course_nopop.php?catoid=37&coid=172560"
+                    },
+                    {
+                      "text": "ADDS 4075 - Drugs and Alcohol",
+                      "href": "https://catalog.unt.edu/preview_course_nopop.php?catoid=37&coid=172562"
+                    },
+                    {
+                      "text": "ADDS 4175 - Addiction Treatment Models",
+                      "href": "https://catalog.unt.edu/preview_course_nopop.php?catoid=37&coid=172564"
+                    },
+                    {
+                      "text": "ADDS 4275 - Alcohol, Drugs and Disability",
+                      "href": "https://catalog.unt.edu/preview_course_nopop.php?catoid=37&coid=172565"
+                    },
+                    {
+                      "text": "ADDS 4375 - Addiction Counseling and Groups",
+                      "href": "https://catalog.unt.edu/preview_course_nopop.php?catoid=37&coid=172566"
+                    },
+                    {
+                      "text": "ADDS 4575 - Current Issues in Substance Use Disorders",
+                      "href": "https://catalog.unt.edu/preview_course_nopop.php?catoid=37&coid=172569"
+                    },
+                    {
+                      "text": "ADDS 4675 - Addictions Counseling Competencies",
+                      "href": "https://catalog.unt.edu/preview_course_nopop.php?catoid=37&coid=172570"
+                    },
+                    {
+                      "text": "ADDS 4775 - Ethical and Professional Issues in Addiction Practices",
+                      "href": "https://catalog.unt.edu/preview_course_nopop.php?catoid=37&coid=174055"
+                    },
+                    {
+                      "text": "ADDS 4881 - Addictions Practicum",
+                      "href": "https://catalog.unt.edu/preview_course_nopop.php?catoid=37&coid=172576"
+                    }
+                  ]
+                ],
+                "subsections": []
+              },
+              {
+                "title": "Rehabilitation studies, 6 hours",
+                "level": 4,
+                "paragraphs": [],
+                "lists": [
+                  [
+                    {
+                      "text": "RHAB 3000 - Active Listening in the Helping Professions",
+                      "href": "https://catalog.unt.edu/preview_course_nopop.php?catoid=37&coid=172554"
+                    },
+                    {
+                      "text": "RHAB 4500 - Assessment in Rehabilitation",
+                      "href": "https://catalog.unt.edu/preview_course_nopop.php?catoid=37&coid=172568"
+                    }
+                  ]
+                ],
+                "subsections": []
+              }
+            ]
+          },
+          {
+            "title": "Other course requirements",
+            "level": 3,
+            "paragraphs": [
+              "None."
+            ],
+            "lists": [],
+            "subsections": []
+          },
+          {
+            "title": "Minor",
+            "level": 3,
+            "paragraphs": [
+              "Minor is optional."
+            ],
+            "lists": [],
+            "subsections": []
+          },
+          {
+            "title": "Electives",
+            "level": 3,
+            "paragraphs": [
+              "Hours required for electives may vary based on course selection and the University Core Curriculum requirements. Electives may be required to satisfy the advanced hour requirement (42) and/or the minimum total hours required for the degree. For specific information see an academic advisor in the College of Health and Public Service."
+            ],
+            "lists": [],
+            "subsections": []
+          },
+          {
+            "title": "Other requirements",
+            "level": 3,
+            "paragraphs": [],
+            "lists": [
+              [
+                {
+                  "text": "Completion of at least 300-hours of field work in ADDS Addictions Practicum."
+                },
+                {
+                  "text": "A minimum Grade Point Average of 2.3 is required for graduation."
+                }
+              ]
+            ],
+            "subsections": []
+          }
+        ]
+      }
+    ]
   },
   "Advertising and Brand Strategy, BS": {
-    "url": "https://catalog.unt.edu/preview_program.php?catoid=37&poid=19049&returnto=4292",
-    "sections": []
+    "url": "https://catalog.unt.edu/preview_program.php?catoid=37&poid=19049",
+    "sections": [
+      {
+        "title": "Overview",
+        "level": 2,
+        "paragraphs": [
+          "A degree in advertising and brand strategy from the Mayborn School of Journalism prepares students to design, manage, and lead equitable advertising campaigns in the context of a multicultural society. Students will graduate with applied creativity, strategic problem-solving, and consumer insight skills gained from extensive hands-on experience working in state-of-the-art technology labs and across media platforms."
+        ],
+        "lists": [],
+        "subsections": []
+      },
+      {
+        "title": "Hours required and general/college requirements",
+        "level": 2,
+        "paragraphs": [
+          "A minimum of 120 semester hours, of which 42 must be advanced, and fulfillment of degree requirements for the Bachelor of Science degree as specified in the “ General Degree Requirements ” in the Degree requirements and graduation section of this catalog and the Mayborn School of Journalism Degree Requirements ."
+        ],
+        "lists": [],
+        "subsections": []
+      },
+      {
+        "title": "Major requirements",
+        "level": 2,
+        "paragraphs": [
+          "42 semester hours in advertising and brand strategy, and noted interdisciplinary courses. Students may take no more than 48 hours of ADVG courses. Check catalog for prerequisites before enrolling in any advanced course."
+        ],
+        "lists": [],
+        "subsections": []
+      },
+      {
+        "title": "Advertising and Brand Strategy",
+        "level": 2,
+        "paragraphs": [
+          "42 semester hours in advertising and brand communications."
+        ],
+        "lists": [],
+        "subsections": [
+          {
+            "title": "Foundation courses, 12 hours",
+            "level": 3,
+            "paragraphs": [],
+            "lists": [
+              [
+                {
+                  "text": "ADVG 1000 - Principles of Advertising and Brand Strategy",
+                  "href": "https://catalog.unt.edu/preview_course_nopop.php?catoid=37&coid=174279"
+                },
+                {
+                  "text": "ADVG 1100 - Applied Design for Advertising and Public Relations",
+                  "href": "https://catalog.unt.edu/preview_course_nopop.php?catoid=37&coid=174280"
+                },
+                {
+                  "text": "ADVG 2000 - Digital Advertising Tools and Analytics",
+                  "href": "https://catalog.unt.edu/preview_course_nopop.php?catoid=37&coid=174281"
+                },
+                {
+                  "text": "ADVG 2100 - Inclusive Advertising",
+                  "href": "https://catalog.unt.edu/preview_course_nopop.php?catoid=37&coid=174282"
+                }
+              ]
+            ],
+            "subsections": []
+          },
+          {
+            "title": "Professional Track courses, 12 hours",
+            "level": 3,
+            "paragraphs": [
+              "Students may choose four courses from the list above, or take three courses from the list above and one course from the following courses:"
+            ],
+            "lists": [
+              [
+                {
+                  "text": "ADVG 3000 - Copywriting for Brands",
+                  "href": "https://catalog.unt.edu/preview_course_nopop.php?catoid=37&coid=174283"
+                },
+                {
+                  "text": "ADVG 3010 - People-Centered Copywriting",
+                  "href": "https://catalog.unt.edu/preview_course_nopop.php?catoid=37&coid=174284"
+                },
+                {
+                  "text": "ADVG 3100 - Advertising Art Direction for Brands",
+                  "href": "https://catalog.unt.edu/preview_course_nopop.php?catoid=37&coid=174285"
+                },
+                {
+                  "text": "ADVG 3110 - Representation Through Advertising Art Direction",
+                  "href": "https://catalog.unt.edu/preview_course_nopop.php?catoid=37&coid=174286"
+                },
+                {
+                  "text": "ADVG 3200 - Advertising Account Management",
+                  "href": "https://catalog.unt.edu/preview_course_nopop.php?catoid=37&coid=173347"
+                },
+                {
+                  "text": "ADVG 3220 - Social Media Client Partnerships",
+                  "href": "https://catalog.unt.edu/preview_course_nopop.php?catoid=37&coid=174287"
+                },
+                {
+                  "text": "ADVG 3300 - Advertising Strategy and Insights",
+                  "href": "https://catalog.unt.edu/preview_course_nopop.php?catoid=37&coid=171453"
+                },
+                {
+                  "text": "ADVG 3310 - Advertising Research and Campaign Evaluation",
+                  "href": "https://catalog.unt.edu/preview_course_nopop.php?catoid=37&coid=174288"
+                },
+                {
+                  "text": "ADVG 3400 - Experiential Advertising and Brand Activations",
+                  "href": "https://catalog.unt.edu/preview_course_nopop.php?catoid=37&coid=174289"
+                },
+                {
+                  "text": "ADVG 3500 - Advertising Media Buying and Planning",
+                  "href": "https://catalog.unt.edu/preview_course_nopop.php?catoid=37&coid=171454"
+                },
+                {
+                  "text": "ADVG 3510 - Programmatic and Tailored Advertising",
+                  "href": "https://catalog.unt.edu/preview_course_nopop.php?catoid=37&coid=174290"
+                },
+                {
+                  "text": "ADVG 4000 - Advanced Advertising Art Direction Workshop",
+                  "href": "https://catalog.unt.edu/preview_course_nopop.php?catoid=37&coid=174291"
+                },
+                {
+                  "text": "Students may choose four courses from the list above, or take three courses from the list above and one course from the following courses:"
+                },
+                {
+                  "text": "JOUR 2400 - Fundamentals of Public Relations Practices",
+                  "href": "https://catalog.unt.edu/preview_course_nopop.php?catoid=37&coid=173244"
+                },
+                {
+                  "text": "JOUR 3270 - Media Entrepreneurship and Innovation",
+                  "href": "https://catalog.unt.edu/preview_course_nopop.php?catoid=37&coid=173658"
+                },
+                {
+                  "text": "JOUR 3300 - Introduction to Visual Communication for News",
+                  "href": "https://catalog.unt.edu/preview_course_nopop.php?catoid=37&coid=171451"
+                },
+                {
+                  "text": "JOUR 4270 - Strategic Social Media",
+                  "href": "https://catalog.unt.edu/preview_course_nopop.php?catoid=37&coid=173179"
+                },
+                {
+                  "text": "JOUR 4620 - Mass Communication Law and Ethics",
+                  "href": "https://catalog.unt.edu/preview_course_nopop.php?catoid=37&coid=171486"
+                },
+                {
+                  "text": "JOUR 4820 - History of American Media",
+                  "href": "https://catalog.unt.edu/preview_course_nopop.php?catoid=37&coid=171491"
+                },
+                {
+                  "text": "ICON 3800 - Consumer Psychology",
+                  "href": "https://catalog.unt.edu/preview_course_nopop.php?catoid=37&coid=171690"
+                },
+                {
+                  "text": "CMHT 3950 - Creating Consumer Experiences",
+                  "href": "https://catalog.unt.edu/preview_course_nopop.php?catoid=37&coid=172702"
+                },
+                {
+                  "text": "CMHT 4750 - Managing a Diverse Workforce",
+                  "href": "https://catalog.unt.edu/preview_course_nopop.php?catoid=37&coid=172705"
+                },
+                {
+                  "text": "MKTG 4120 - Consumer Behavior",
+                  "href": "https://catalog.unt.edu/preview_course_nopop.php?catoid=37&coid=171815"
+                }
+              ]
+            ],
+            "subsections": []
+          },
+          {
+            "title": "Interdisciplinary courses, 9 hours",
+            "level": 3,
+            "paragraphs": [],
+            "lists": [
+              [
+                {
+                  "text": "MDSE 3900 - Branding and Promotion",
+                  "href": "https://catalog.unt.edu/preview_course_nopop.php?catoid=37&coid=173414"
+                },
+                {
+                  "text": "MGMT 4235 - Social Entrepreneurship",
+                  "href": "https://catalog.unt.edu/preview_course_nopop.php?catoid=37&coid=171773"
+                },
+                {
+                  "text": "MKTG 3651 - Foundations of Marketing Practice for Non-Business Majors",
+                  "href": "https://catalog.unt.edu/preview_course_nopop.php?catoid=37&coid=173949"
+                }
+              ]
+            ],
+            "subsections": []
+          },
+          {
+            "title": "Senior Experience in Advertising, 9 hours",
+            "level": 3,
+            "paragraphs": [
+              "or",
+              "concurrently with one of three courses below"
+            ],
+            "lists": [
+              [
+                {
+                  "text": "ADVG 4100 - Advertising Creative Collective and Freelancing",
+                  "href": "https://catalog.unt.edu/preview_course_nopop.php?catoid=37&coid=174292"
+                },
+                {
+                  "text": "ADVG 4300 - Advertising Full-Service Campaigns",
+                  "href": "https://catalog.unt.edu/preview_course_nopop.php?catoid=37&coid=171470"
+                },
+                {
+                  "text": "or"
+                },
+                {
+                  "text": "ADVG 4400 - Advertising Campaigns Competition",
+                  "href": "https://catalog.unt.edu/preview_course_nopop.php?catoid=37&coid=173178"
+                },
+                {
+                  "text": "ADVG 4200 - Advertising Career Advancement",
+                  "href": "https://catalog.unt.edu/preview_course_nopop.php?catoid=37&coid=174293"
+                },
+                {
+                  "text": "concurrently with one of three courses below"
+                },
+                {
+                  "text": "ADVG 4800 - Professional Internship",
+                  "href": "https://catalog.unt.edu/preview_course_nopop.php?catoid=37&coid=174294"
+                },
+                {
+                  "text": "JOUR 4805 - Agency PR Practicum",
+                  "href": "https://catalog.unt.edu/preview_course_nopop.php?catoid=37&coid=173118"
+                },
+                {
+                  "text": "ADVG 4815 - SWOOP Agency Practicum",
+                  "href": "https://catalog.unt.edu/preview_course_nopop.php?catoid=37&coid=173431"
+                }
+              ]
+            ],
+            "subsections": []
+          },
+          {
+            "title": "Other course requirements",
+            "level": 3,
+            "paragraphs": [
+              "The following requirements are prerequisites for all advanced advertising courses:",
+              "Complete the following with a grade of C or better:",
+              "or",
+              "or"
+            ],
+            "lists": [
+              [
+                {
+                  "text": "MATH 1680 - Elementary Probability and Statistics",
+                  "href": "https://catalog.unt.edu/preview_course_nopop.php?catoid=37&coid=171644"
+                },
+                {
+                  "text": "JOUR 4250 - Race, Gender and the Media: A Methods Approach",
+                  "href": "https://catalog.unt.edu/preview_course_nopop.php?catoid=37&coid=171474"
+                },
+                {
+                  "text": "Complete the following with a grade of C or better:"
+                },
+                {
+                  "text": "ENGL 1310 - First-Year Writing I",
+                  "href": "https://catalog.unt.edu/preview_course_nopop.php?catoid=37&coid=171012"
+                },
+                {
+                  "text": "or"
+                },
+                {
+                  "text": "TECM 1700 - Introduction to Professional, Science, and Technical Writing",
+                  "href": "https://catalog.unt.edu/preview_course_nopop.php?catoid=37&coid=172848"
+                },
+                {
+                  "text": "ENGL 1320 - First-Year Writing II",
+                  "href": "https://catalog.unt.edu/preview_course_nopop.php?catoid=37&coid=171016"
+                },
+                {
+                  "text": "or"
+                },
+                {
+                  "text": "TECM 2700 - Technical Writing",
+                  "href": "https://catalog.unt.edu/preview_course_nopop.php?catoid=37&coid=172849"
+                },
+                {
+                  "text": "Complete 9 hours of advanced level coursework in Sociology (SOCI) or Anthropology (ANTH)."
+                }
+              ]
+            ],
+            "subsections": []
+          }
+        ]
+      },
+      {
+        "title": "Minor",
+        "level": 2,
+        "paragraphs": [
+          "Students must complete an 18-hour minor outside the advertising and brand communications (ADVG) coursework and must choose their minor in consultation with the Mayborn School of Journalism Advising office. Minors can be chosen that support student Professional Track coursework."
+        ],
+        "lists": [],
+        "subsections": []
+      },
+      {
+        "title": "Electives",
+        "level": 2,
+        "paragraphs": [
+          "Hours required for electives may vary based on course selection and the University Core Curriculum requirements. Electives may be required to satisfy the advanced hour requirement and/or the minimum total hours required for the degree. For specific information, see an academic advisor in the Mayborn School of Journalism."
+        ],
+        "lists": [],
+        "subsections": []
+      },
+      {
+        "title": "Other requirements",
+        "level": 2,
+        "paragraphs": [
+          "Students majoring in advertising and brand communications are required to maintain a 2.0 cumulative UNT GPA to enroll in advertising courses and have a 2.5 GPA in the major in order to graduate.",
+          "a. Maintain a 2.0 cumulative UNT GPA.",
+          "b. Attain a 2.5 GPA in all major courses upon graduation.",
+          "c. No more than 12 semester hours of advertising credit will be accepted from a transfer student who is entering with fewer than 75 semester credit hours. For students transferring with 75 or more semester credit hours, a maximum of 18 transfer journalism hours will be accepted for credit toward the bachelor’s degree."
+        ],
+        "lists": [],
+        "subsections": []
+      }
+    ]
   },
   "Anthropology, BA": {
-    "url": "https://catalog.unt.edu/preview_program.php?catoid=37&poid=18520&returnto=4292",
-    "sections": []
+    "url": "https://catalog.unt.edu/preview_program.php?catoid=37&poid=18520",
+    "sections": [
+      {
+        "title": "Overview",
+        "level": 2,
+        "paragraphs": [
+          "A Bachelor of Arts with a major in anthropology provides the skills needed to work in a world transformed by global economic forces, shifting political borders, national conflicts, ethnic division, food and environmental crises, natural disasters, genocide and public health issues.",
+          "The following requirements must be satisfied for a Bachelor of Arts with a major in anthropology."
+        ],
+        "lists": [],
+        "subsections": []
+      },
+      {
+        "title": "Hours required and general/college requirements",
+        "level": 2,
+        "paragraphs": [
+          "A minimum of 120 semester hours, of which 42 must be advanced, and fulfillment of degree requirements for the Bachelor of Arts degree as specified in the University Core Curriculum in the Academic policies section of this catalog and the College of Liberal Arts and Social Sciences requirements."
+        ],
+        "lists": [],
+        "subsections": []
+      },
+      {
+        "title": "Major requirements",
+        "level": 2,
+        "paragraphs": [
+          "Major of 39 hours in anthropology, including 15 hours of required anthropology courses:"
+        ],
+        "lists": [
+          [
+            {
+              "text": "ANTH 1010 - Introduction to Anthropology",
+              "href": "https://catalog.unt.edu/preview_course_nopop.php?catoid=37&coid=170160"
+            },
+            {
+              "text": "ANTH 2300 - Culture and Society",
+              "href": "https://catalog.unt.edu/preview_course_nopop.php?catoid=37&coid=170166"
+            },
+            {
+              "text": "ANTH 4000 - Applied Anthropology",
+              "href": "https://catalog.unt.edu/preview_course_nopop.php?catoid=37&coid=170187"
+            },
+            {
+              "text": "ANTH 4011 - Anthropological Field Methods",
+              "href": "https://catalog.unt.edu/preview_course_nopop.php?catoid=37&coid=170188"
+            },
+            {
+              "text": "ANTH 4021 - Development of Anthropological Thought",
+              "href": "https://catalog.unt.edu/preview_course_nopop.php?catoid=37&coid=170189"
+            }
+          ]
+        ],
+        "subsections": [
+          {
+            "title": "Elective anthropology requirements, 24 hours",
+            "level": 3,
+            "paragraphs": [
+              "A minimum of 6 hours must be taken from 3000-level ANTH courses, 6 hours from 4000-level ANTH courses, 6 additional hours at the advanced level (either 3000- or 4000-level), and 6 hours of ANTH courses from any level.",
+              "Note: ARCH 2800 may be substituted for one lower-level elective anthropology course."
+            ],
+            "lists": [],
+            "subsections": []
+          }
+        ]
+      },
+      {
+        "title": "Minor",
+        "level": 2,
+        "paragraphs": [
+          "No minor is required."
+        ],
+        "lists": [],
+        "subsections": []
+      },
+      {
+        "title": "Electives",
+        "level": 2,
+        "paragraphs": [
+          "See individual degree plan."
+        ],
+        "lists": [],
+        "subsections": []
+      },
+      {
+        "title": "Other requirements",
+        "level": 2,
+        "paragraphs": [],
+        "lists": [
+          [
+            {
+              "text": "Students must pass all courses required for the anthropology major with a C or higher;"
+            },
+            {
+              "text": "Transfer course work to be substituted for required anthropology courses must be approved by a student’s faculty advisor during the degree plan process;"
+            },
+            {
+              "text": "Credit substitution requests must be pre-approved prior to a student enrolling in the course."
+            }
+          ]
+        ],
+        "subsections": []
+      }
+    ]
   },
   "Applied Arts and Sciences, BAAS": {
-    "url": "https://catalog.unt.edu/preview_program.php?catoid=37&poid=18521&returnto=4292",
-    "sections": []
+    "url": "https://catalog.unt.edu/preview_program.php?catoid=37&poid=18521",
+    "sections": [
+      {
+        "title": "Overview",
+        "level": 2,
+        "paragraphs": [
+          "The 120-hour multidisciplinary degree program is specifically designed for nontraditional students who wish to earn a bachelor’s degree. This unique program accepts credits earned from military training, from an Associate of Applied Science degree, or from other university credits. It may also facilitate graduation for students who are returning to college after spending time in the workplace. Interested students should contact the BAAS Program office at 940-369-8129 or CACS@unt.edu ."
+        ],
+        "lists": [],
+        "subsections": []
+      },
+      {
+        "title": "Degree requirements",
+        "level": 2,
+        "paragraphs": [],
+        "lists": [],
+        "subsections": [
+          {
+            "title": "Hours required and general/college requirements",
+            "level": 3,
+            "paragraphs": [
+              "A minimum of 120 semester hours, of which 36 must be advanced, and fulfillment of degree requirements for the Bachelor of Applied Arts and Sciences degree as specified in the General Degree Requirements in the Academic policies section of this catalog and the College of Applied and Collaborative Studies requirements."
+            ],
+            "lists": [],
+            "subsections": []
+          },
+          {
+            "title": "Major requirements",
+            "level": 3,
+            "paragraphs": [],
+            "lists": [],
+            "subsections": [
+              {
+                "title": "Occupational specialization, 21 hours",
+                "level": 4,
+                "paragraphs": [
+                  "Comprised of courses related to a specific occupation, field or subject. The occupational specialization often consists of field-specific course work completed for an Associate of Applied Science (AAS) degree at a community college. Active-duty military or veterans may receive credit for technical or other formal training courses under this component of the degree plan. Other students who have not completed an occupational specialization through courses taken in a community college or in the military may create one by selecting a primary area of study, in consultation with an advisor."
+                ],
+                "lists": [],
+                "subsections": []
+              },
+              {
+                "title": "Unifying Courses, 9 hours",
+                "level": 4,
+                "paragraphs": [
+                  "Three specific courses from the College of Applied and Collaborative Studies that help students sharpen their ability to communicate, analyze information and network effectively. Students must earn a C or better in each of the courses in this component to receive credit toward the degree."
+                ],
+                "lists": [
+                  [
+                    {
+                      "text": "BAAS 3000 - Pathways to Civic Engagement",
+                      "href": "https://catalog.unt.edu/preview_course_nopop.php?catoid=37&coid=172225"
+                    },
+                    {
+                      "text": "BAAS 3020 - Fundamentals of Inquiry and Discovery",
+                      "href": "https://catalog.unt.edu/preview_course_nopop.php?catoid=37&coid=173119"
+                    },
+                    {
+                      "text": "BAAS 4100 - Managing a 21st Century Career",
+                      "href": "https://catalog.unt.edu/preview_course_nopop.php?catoid=37&coid=173654"
+                    }
+                  ]
+                ],
+                "subsections": []
+              },
+              {
+                "title": "Professional development concentrations, 36 hours",
+                "level": 4,
+                "paragraphs": [
+                  "Consists of two or three separate concentrations, each of which will consist of a minimum of 12 credit hours that serve to enhance the skills a student has acquired through prior education or are complimentary to the student’s career plans."
+                ],
+                "lists": [],
+                "subsections": []
+              }
+            ]
+          },
+          {
+            "title": "Minor",
+            "level": 3,
+            "paragraphs": [
+              "None required."
+            ],
+            "lists": [],
+            "subsections": []
+          },
+          {
+            "title": "Electives",
+            "level": 3,
+            "paragraphs": [
+              "Any UNT or transfer courses the student and advisor deem appropriate to the degree may be selected. Caution must be exercised to ensure the student fulfills the university requirement of 36 hours of advanced-level course work."
+            ],
+            "lists": [],
+            "subsections": []
+          },
+          {
+            "title": "Other requirements",
+            "level": 3,
+            "paragraphs": [],
+            "lists": [
+              [
+                {
+                  "text": "A total of 36 hours of upper-division work."
+                },
+                {
+                  "text": "At least 24 hours of upper-division work in residence."
+                }
+              ]
+            ],
+            "subsections": []
+          },
+          {
+            "title": "Note",
+            "level": 3,
+            "paragraphs": [
+              "A lower-level transfer course that is determined to be equivalent to a UNT upper-level course does not satisfy the requirement for advanced hours.",
+              "Departmental consent is required for students wishing to apply for up to 6 credit hours of university-approved Prior Learning Credit for non-traditional learning experiences in transfer to satisfy CACS degree requirements."
+            ],
+            "lists": [],
+            "subsections": []
+          }
+        ]
+      }
+    ]
   },
   "Applied Arts and Sciences, BAAS with a concentration in Applied Heritage Management": {
-    "url": "https://catalog.unt.edu/preview_program.php?catoid=37&poid=19614&returnto=4292",
-    "sections": []
+    "url": "https://catalog.unt.edu/preview_program.php?catoid=37&poid=19614",
+    "sections": [
+      {
+        "title": "Overview",
+        "level": 2,
+        "paragraphs": [
+          "The 120-hour multidisciplinary degree program is specifically designed for nontraditional students who wish to earn a bachelor’s degree. This unique program accepts credits earned from military training, from an Associate of Applied Science degree, or from other university credits. It may also facilitate graduation for students who are returning to college after spending time in the workplace.",
+          "Applied Heritage Management (HM, also called cultural heritage management) is a multidisciplinary field focused on identifying, preserving, and promoting cultural heritage. Cultural heritage is the tangible and intangible assets of societies that are inherited from the past. HM can include disciplines such as (listed in alphabetical order): archaeology, art history, art, cultural anthropology, dance, economics, environmental studies, history, marketing, museum studies, music, political science, tourism studies, among others. Specialists often work with other stakeholders, such as community members and government organizations."
+        ],
+        "lists": [],
+        "subsections": []
+      },
+      {
+        "title": "Degree requirements",
+        "level": 2,
+        "paragraphs": [],
+        "lists": [],
+        "subsections": [
+          {
+            "title": "Hours required and general/college requirements",
+            "level": 3,
+            "paragraphs": [
+              "A minimum of 120 semester hours, of which 36 must be advanced, and fulfillment of degree requirements for the Bachelor of Applied Arts and Sciences degree as specified in the General Degree Requirements in the Academics section of this catalog and the College of Applied and Collaborative Studies requirements."
+            ],
+            "lists": [],
+            "subsections": []
+          },
+          {
+            "title": "Major requirements",
+            "level": 3,
+            "paragraphs": [],
+            "lists": [],
+            "subsections": [
+              {
+                "title": "Occupational specialization, 21 hours",
+                "level": 4,
+                "paragraphs": [
+                  "Comprised of courses related to a specific occupation, field or subject. The occupational specialization often consists of field-specific course work completed for an Associate of Applied Science (AAS) degree at a community college. Active-duty military or veterans may receive credit for technical or other formal training courses under this component of the degree plan. Other students who have not completed an occupational specialization through courses taken in a community college or in the military may create one by selecting a primary area of study, in consultation with an advisor."
+                ],
+                "lists": [],
+                "subsections": []
+              },
+              {
+                "title": "Unifying courses, 9 hours",
+                "level": 4,
+                "paragraphs": [
+                  "Three specific courses from College of Applied and Collaborative Studies (CACS) that help students sharpen their ability to communicate, analyze information and network effectively. Students must earn a C or better in each of the courses in this component to receive credit toward the degree."
+                ],
+                "lists": [
+                  [
+                    {
+                      "text": "BAAS 3000 - Pathways to Civic Engagement",
+                      "href": "https://catalog.unt.edu/preview_course_nopop.php?catoid=37&coid=172225"
+                    },
+                    {
+                      "text": "BAAS 3020 - Fundamentals of Inquiry and Discovery",
+                      "href": "https://catalog.unt.edu/preview_course_nopop.php?catoid=37&coid=173119"
+                    },
+                    {
+                      "text": "BAAS 4100 - Managing a 21st Century Career",
+                      "href": "https://catalog.unt.edu/preview_course_nopop.php?catoid=37&coid=173654"
+                    }
+                  ]
+                ],
+                "subsections": []
+              },
+              {
+                "title": "Professional development concentrations, 36 hours",
+                "level": 4,
+                "paragraphs": [
+                  "Consists of two or three separate concentrations, each of which will consist of a minimum of 12 credit hours that serve to enhance the skills a student has acquired through prior education or are complimentary to the student’s career plans."
+                ],
+                "lists": [],
+                "subsections": []
+              }
+            ]
+          },
+          {
+            "title": "Focus Area",
+            "level": 3,
+            "paragraphs": [
+              "Applied Heritage Management (HM, also called cultural heritage management) is a multidisciplinary field focused on identifying, preserving, and promoting cultural heritage. Cultural heritage is the tangible and intangible assets of societies that are inherited from the past. HM can include disciplines such as (listed in alphabetical order): archaeology, art history, art, cultural anthropology, dance, economics, environmental studies, history, marketing, museum studies, music, political science, tourism studies, among others. Specialists often work with other stakeholders, such as community members and government organizations. No course substitutions in the Focus Area will be made without the written consent of the BAAS Program Director or DMI Department Chair.",
+              "Choose one:"
+            ],
+            "lists": [
+              [
+                {
+                  "text": "ARCH 2800 - Archaeological Science",
+                  "href": "https://catalog.unt.edu/preview_course_nopop.php?catoid=37&coid=170220"
+                },
+                {
+                  "text": "AMDS 4800 - Internship",
+                  "href": "https://catalog.unt.edu/preview_course_nopop.php?catoid=37&coid=173770"
+                },
+                {
+                  "text": "AMDS 3210 - Public Engagement in Heritage Management",
+                  "href": "https://catalog.unt.edu/preview_course_nopop.php?catoid=37&coid=178309"
+                },
+                {
+                  "text": "AMDS 3220 - Heritage Museum Studies",
+                  "href": "https://catalog.unt.edu/preview_course_nopop.php?catoid=37&coid=178310"
+                },
+                {
+                  "text": "AMDS 3230 - Heritage Travel",
+                  "href": "https://catalog.unt.edu/preview_course_nopop.php?catoid=37&coid=178311"
+                },
+                {
+                  "text": "AMDS 3240 - Heritage Laws and Ethics",
+                  "href": "https://catalog.unt.edu/preview_course_nopop.php?catoid=37&coid=178312"
+                },
+                {
+                  "text": "GEOG 3500 - Introduction to Geographic Information Systems",
+                  "href": "https://catalog.unt.edu/preview_course_nopop.php?catoid=37&coid=171155"
+                },
+                {
+                  "text": "Choose one:"
+                },
+                {
+                  "text": "CACS 2000 - Applied Professional Communications",
+                  "href": "https://catalog.unt.edu/preview_course_nopop.php?catoid=37&coid=173875"
+                },
+                {
+                  "text": "CACS 2010 - Applied Project Management",
+                  "href": "https://catalog.unt.edu/preview_course_nopop.php?catoid=37&coid=173877"
+                },
+                {
+                  "text": "CACS 2020 - Research Design and Methods",
+                  "href": "https://catalog.unt.edu/preview_course_nopop.php?catoid=37&coid=174419"
+                },
+                {
+                  "text": "CACS 2030 - Creativity and Complex Problems",
+                  "href": "https://catalog.unt.edu/preview_course_nopop.php?catoid=37&coid=174420"
+                },
+                {
+                  "text": "CACS 2040 - Team Development",
+                  "href": "https://catalog.unt.edu/preview_course_nopop.php?catoid=37&coid=174014"
+                }
+              ]
+            ],
+            "subsections": []
+          },
+          {
+            "title": "Electives",
+            "level": 3,
+            "paragraphs": [
+              "Any UNT or transfer courses the student and advisor deem appropriate to the degree may be selected. Caution must be exercised to ensure the student fulfills the university requirement of 36 hours of advanced-level course work."
+            ],
+            "lists": [],
+            "subsections": []
+          },
+          {
+            "title": "Note",
+            "level": 3,
+            "paragraphs": [
+              "Departmental consent required for students wishing to apply up to 6 credit hours of university-approved Prior Learning Credit for non-traditional learning experiences in transfer to satisfy CACS degree requirements. A lower-level transfer course that is determined to be equivalent to a UNT upper-level course does not satisfy the requirement for advanced hours."
+            ],
+            "lists": [],
+            "subsections": []
+          }
+        ]
+      }
+    ]
   },
   "Applied Arts and Sciences, BAAS with a concentration in Applied Project Design": {
-    "url": "https://catalog.unt.edu/preview_program.php?catoid=37&poid=19091&returnto=4292",
-    "sections": []
+    "url": "https://catalog.unt.edu/preview_program.php?catoid=37&poid=19091",
+    "sections": [
+      {
+        "title": "Overview",
+        "level": 2,
+        "paragraphs": [
+          "The 120-hour multidisciplinary degree program is specifically designed for nontraditional students who wish to earn a bachelor’s degree. This unique program accepts credits earned from military training, from an Associate of Applied Science degree, or from other university credits. It may also facilitate graduation for students who are returning to college after spending time in the workplace. Interested students should contact the BAAS Program office at 940-369-8129 or cacs@unt.edu ."
+        ],
+        "lists": [],
+        "subsections": []
+      },
+      {
+        "title": "Degree requirements",
+        "level": 2,
+        "paragraphs": [],
+        "lists": [],
+        "subsections": [
+          {
+            "title": "Hours required and general/college requirements",
+            "level": 3,
+            "paragraphs": [
+              "A minimum of 120 semester hours, of which 36 must be advanced, and fulfillment of degree requirements for the Bachelor of Applied Arts and Sciences degree as specified in the General Degree Requirements in the Academics section of this catalog and the College of Applied and Collaborative Studies requirements."
+            ],
+            "lists": [],
+            "subsections": []
+          },
+          {
+            "title": "Major requirements",
+            "level": 3,
+            "paragraphs": [],
+            "lists": [],
+            "subsections": [
+              {
+                "title": "Occupational specialization, 21 hours",
+                "level": 4,
+                "paragraphs": [
+                  "Comprised of courses related to a specific occupation, field or subject. The occupational specialization often consists of field-specific course work completed for an Associate of Applied Science (AAS) degree at a community college. Active-duty military or veterans may receive credit for technical or other formal training courses under this component of the degree plan. Other students who have not completed an occupational specialization through courses taken in a community college or in the military may create one by selecting a primary area of study, in consultation with an advisor."
+                ],
+                "lists": [],
+                "subsections": []
+              },
+              {
+                "title": "Unifying courses, 9 hours",
+                "level": 4,
+                "paragraphs": [
+                  "Three specific courses from the College of Applied and Collaborative Studies that help students sharpen their ability to communicate, analyze information and network effectively. Students must earn a C or better in each of the courses in this component to receive credit toward the degree."
+                ],
+                "lists": [
+                  [
+                    {
+                      "text": "BAAS 3000 - Pathways to Civic Engagement",
+                      "href": "https://catalog.unt.edu/preview_course_nopop.php?catoid=37&coid=172225"
+                    },
+                    {
+                      "text": "BAAS 3020 - Fundamentals of Inquiry and Discovery",
+                      "href": "https://catalog.unt.edu/preview_course_nopop.php?catoid=37&coid=173119"
+                    },
+                    {
+                      "text": "BAAS 4100 - Managing a 21st Century Career",
+                      "href": "https://catalog.unt.edu/preview_course_nopop.php?catoid=37&coid=173654"
+                    }
+                  ]
+                ],
+                "subsections": []
+              },
+              {
+                "title": "Professional development concentration, 36 hours",
+                "level": 4,
+                "paragraphs": [
+                  "Consists of two or three separate concentrations, each of which will consist of a minimum of 12 credit hours that serve to enhance the skills a student has acquired through prior education or are complimentary to the student’s career plans."
+                ],
+                "lists": [],
+                "subsections": []
+              }
+            ]
+          },
+          {
+            "title": "Focus area",
+            "level": 3,
+            "paragraphs": [
+              "The Applied Project Design focus area is tailored for working professionals in a trade seeking a Bachelor’s degree for career and personal advancement. The focus area is a specialized area of study integrating the disciplines of project management, informed and creative problem solving, and analytics. Courses are project-based and designed with built-in industry engagement to develop your skills and your professional connections. This focus area requires seven (7) courses that are 3 credit hours each and three (3) workshops that are 1 credit hour each. No course substitutions in the Focus Area will be made without the written consent of the BAAS Program Director or DMI Department Chair."
+            ],
+            "lists": [
+              [
+                {
+                  "text": "ADAR 2020 - Data Design, Analysis and Representation",
+                  "href": "https://catalog.unt.edu/preview_course_nopop.php?catoid=37&coid=174220"
+                },
+                {
+                  "text": "ADAR 4020 - Process Optimization and Prescriptive Analysis",
+                  "href": "https://catalog.unt.edu/preview_course_nopop.php?catoid=37&coid=173871"
+                },
+                {
+                  "text": "ADSN 4030 - Applied Strategic Design",
+                  "href": "https://catalog.unt.edu/preview_course_nopop.php?catoid=37&coid=174218"
+                },
+                {
+                  "text": "APMG 2011 - Project Workshop: Beginner",
+                  "href": "https://catalog.unt.edu/preview_course_nopop.php?catoid=37&coid=173878"
+                },
+                {
+                  "text": "APMG 3120 - Problem Analysis",
+                  "href": "https://catalog.unt.edu/preview_course_nopop.php?catoid=37&coid=173879"
+                },
+                {
+                  "text": "APMG 3121 - Project Workshop: Intermediate",
+                  "href": "https://catalog.unt.edu/preview_course_nopop.php?catoid=37&coid=173880"
+                },
+                {
+                  "text": "APMG 3221 - Project Workshop: Intermediate",
+                  "href": "https://catalog.unt.edu/preview_course_nopop.php?catoid=37&coid=173882"
+                },
+                {
+                  "text": "CACS 2000 - Applied Professional Communications",
+                  "href": "https://catalog.unt.edu/preview_course_nopop.php?catoid=37&coid=173875"
+                },
+                {
+                  "text": "CACS 2010 - Applied Project Management",
+                  "href": "https://catalog.unt.edu/preview_course_nopop.php?catoid=37&coid=173877"
+                },
+                {
+                  "text": "CACS 2040 - Team Development",
+                  "href": "https://catalog.unt.edu/preview_course_nopop.php?catoid=37&coid=174014"
+                }
+              ]
+            ],
+            "subsections": []
+          },
+          {
+            "title": "Electives",
+            "level": 3,
+            "paragraphs": [
+              "Any UNT or transfer courses the student and advisor deem appropriate to the degree may be selected. Caution must be exercised to ensure the student fulfills the university requirement of 36 hours of advanced-level course work."
+            ],
+            "lists": [],
+            "subsections": []
+          },
+          {
+            "title": "Other requirements",
+            "level": 3,
+            "paragraphs": [
+              "A total of 36 hours of upper-division work. At least 24 hours of upper-division work in residence."
+            ],
+            "lists": [],
+            "subsections": []
+          },
+          {
+            "title": "Note",
+            "level": 3,
+            "paragraphs": [
+              "A lower-level transfer course that is determined to be equivalent to a UNT upper-level course does not satisfy the requirement for advanced hours.",
+              "Departmental consent is required for students wishing to apply for up to 6 credit hours of university-approved Prior Learning Credit for non-traditional learning experiences in transfer to satisfy CACS degree requirements."
+            ],
+            "lists": [],
+            "subsections": []
+          }
+        ]
+      }
+    ]
   },
   "Applied Arts and Sciences, BAAS with a concentration in Enology and Brewing": {
-    "url": "https://catalog.unt.edu/preview_program.php?catoid=37&poid=19616&returnto=4292",
-    "sections": []
+    "url": "https://catalog.unt.edu/preview_program.php?catoid=37&poid=19616",
+    "sections": [
+      {
+        "title": "Overview",
+        "level": 2,
+        "paragraphs": [
+          "The 120-hour multidisciplinary degree program is specifically designed for nontraditional students who wish to earn a bachelor’s degree. This unique program accepts credits earned from military training, from an Associate of Applied Science degree, or from other university credits. It may also facilitate graduation for students who are returning to college after spending time in the workplace. Interested students should contact the BAAS Program office at 940-369-8129 or CACS@unt.edu ."
+        ],
+        "lists": [],
+        "subsections": []
+      },
+      {
+        "title": "Degree requirements",
+        "level": 2,
+        "paragraphs": [],
+        "lists": [],
+        "subsections": [
+          {
+            "title": "Hours required and general/college requirements",
+            "level": 3,
+            "paragraphs": [
+              "A minimum of 120 semester hours, of which 36 must be advanced, and fulfillment of degree requirements for the Bachelor of Applied Arts and Sciences degree as specified in the General Degree Requirements in the Academics section of this catalog and the College of Applied and Collaborative Studies requirements."
+            ],
+            "lists": [],
+            "subsections": []
+          },
+          {
+            "title": "Major requirements",
+            "level": 3,
+            "paragraphs": [],
+            "lists": [],
+            "subsections": [
+              {
+                "title": "Occupational specialization, 21 hours",
+                "level": 4,
+                "paragraphs": [
+                  "Comprised of courses related to a specific occupation, field or subject. The occupational specialization often consists of field-specific course work completed for an Associate of Applied Science (AAS) degree at a community college. Active-duty military or veterans may receive credit for technical or other formal training courses under this component of the degree plan. Other students who have not completed an occupational specialization through courses taken in a community college or in the military may create one by selecting a primary area of study, in consultation with an advisor."
+                ],
+                "lists": [],
+                "subsections": []
+              },
+              {
+                "title": "Unifying courses, 9 hours",
+                "level": 4,
+                "paragraphs": [
+                  "Three specific courses from the College of Applied and Collaborative Studies that help students sharpen their ability to communicate, analyze information and network effectively. Students must earn a C or better in each of the courses in this component to receive credit toward the degree."
+                ],
+                "lists": [
+                  [
+                    {
+                      "text": "BAAS 3000 - Pathways to Civic Engagement",
+                      "href": "https://catalog.unt.edu/preview_course_nopop.php?catoid=37&coid=172225"
+                    },
+                    {
+                      "text": "BAAS 3020 - Fundamentals of Inquiry and Discovery",
+                      "href": "https://catalog.unt.edu/preview_course_nopop.php?catoid=37&coid=173119"
+                    },
+                    {
+                      "text": "BAAS 4100 - Managing a 21st Century Career",
+                      "href": "https://catalog.unt.edu/preview_course_nopop.php?catoid=37&coid=173654"
+                    }
+                  ]
+                ],
+                "subsections": []
+              },
+              {
+                "title": "Professional development concentrations, 36 hours",
+                "level": 4,
+                "paragraphs": [
+                  "Consists of two or three separate concentrations, each of which will consist of a minimum of 12 credit hours that serve to enhance the skills a student has acquired through prior education or are complimentary to the student’s career plans."
+                ],
+                "lists": [],
+                "subsections": []
+              }
+            ]
+          },
+          {
+            "title": "Focus Area",
+            "level": 3,
+            "paragraphs": [
+              "The Enology and Brewing focus area provides a multidisciplinary education in the biological principles underlying wine and beer production and distribution, including hands-on experiential learning about viticulture and fermentation. With the support of local industry partners, this program provides the knowledge base for problem-solving and decision-making in commercial beverage production and management. No course substitutions in the Focus Area will be made without the written consent of the BAAS Program Director or DMI Department Chair."
+            ],
+            "lists": [],
+            "subsections": [
+              {
+                "title": "Required courses, 21 hours",
+                "level": 4,
+                "paragraphs": [],
+                "lists": [
+                  [
+                    {
+                      "text": "AMDS 3900 - Principles of Viticulture",
+                      "href": "https://catalog.unt.edu/preview_course_nopop.php?catoid=37&coid=178239"
+                    },
+                    {
+                      "text": "AMDS 3910 - Principles of Enology",
+                      "href": "https://catalog.unt.edu/preview_course_nopop.php?catoid=37&coid=178240"
+                    },
+                    {
+                      "text": "AMDS 3920 - Principles of Brewing",
+                      "href": "https://catalog.unt.edu/preview_course_nopop.php?catoid=37&coid=178241"
+                    },
+                    {
+                      "text": "AMDS 3940 - Marketing and Distribution of Wine and Craft Beverage",
+                      "href": "https://catalog.unt.edu/preview_course_nopop.php?catoid=37&coid=178243"
+                    },
+                    {
+                      "text": "AMDS 3950 - Applied Business Fundamentals for Wine and Craft Beverage",
+                      "href": "https://catalog.unt.edu/preview_course_nopop.php?catoid=37&coid=178242"
+                    },
+                    {
+                      "text": "AMDS 4800 - Internship (3 hours)",
+                      "href": "https://catalog.unt.edu/preview_course_nopop.php?catoid=37&coid=173770"
+                    },
+                    {
+                      "text": "HMGT 4300 - Survey of Beverages in the Hospitality Industry",
+                      "href": "https://catalog.unt.edu/preview_course_nopop.php?catoid=37&coid=171390"
+                    },
+                    {
+                      "text": "A course substitution will be allowed from an approval list of courses for students under the age of 21 or otherwise unable to be in contact with alcoholic beverages."
+                    }
+                  ]
+                ],
+                "subsections": []
+              },
+              {
+                "title": "Required elective choice, 3 hours",
+                "level": 4,
+                "paragraphs": [
+                  "Students must choose one of the following electives:"
+                ],
+                "lists": [
+                  [
+                    {
+                      "text": "CACS 2000 - Applied Professional Communications",
+                      "href": "https://catalog.unt.edu/preview_course_nopop.php?catoid=37&coid=173875"
+                    },
+                    {
+                      "text": "CACS 2010 - Applied Project Management",
+                      "href": "https://catalog.unt.edu/preview_course_nopop.php?catoid=37&coid=173877"
+                    },
+                    {
+                      "text": "CACS 2020 - Research Design and Methods",
+                      "href": "https://catalog.unt.edu/preview_course_nopop.php?catoid=37&coid=174419"
+                    },
+                    {
+                      "text": "CACS 2030 - Creativity and Complex Problems",
+                      "href": "https://catalog.unt.edu/preview_course_nopop.php?catoid=37&coid=174420"
+                    },
+                    {
+                      "text": "CACS 2040 - Team Development",
+                      "href": "https://catalog.unt.edu/preview_course_nopop.php?catoid=37&coid=174014"
+                    }
+                  ]
+                ],
+                "subsections": []
+              }
+            ]
+          },
+          {
+            "title": "Electives",
+            "level": 3,
+            "paragraphs": [
+              "Any UNT or transfer courses the student and advisor deem appropriate to the degree may be selected. Caution must be exercised to ensure the student fulfills the university requirement of 36 hours of advanced-level course work."
+            ],
+            "lists": [],
+            "subsections": []
+          },
+          {
+            "title": "Other requirements",
+            "level": 3,
+            "paragraphs": [
+              "A total of 36 hours of upper-division work. At least 24 hours of upper-division work in residence."
+            ],
+            "lists": [],
+            "subsections": []
+          },
+          {
+            "title": "Note",
+            "level": 3,
+            "paragraphs": [
+              "A lower-level transfer course that is determined to be equivalent to a UNT upper-level course does not satisfy the requirement for advanced hours. Departmental consent required for students wishing to apply up to 6 credit hours of university-approved Prior Learning Credit for non-traditional learning experiences in transfer to satisfy CACS degree requirements."
+            ],
+            "lists": [],
+            "subsections": []
+          }
+        ]
+      }
+    ]
   },
   "Applied Arts and Sciences, BAAS with a concentration in Industrial Distribution": {
-    "url": "https://catalog.unt.edu/preview_program.php?catoid=37&poid=19092&returnto=4292",
-    "sections": []
+    "url": "https://catalog.unt.edu/preview_program.php?catoid=37&poid=19092",
+    "sections": [
+      {
+        "title": "Overview",
+        "level": 2,
+        "paragraphs": [
+          "The 120-hour multidisciplinary degree program is specifically designed for nontraditional students who wish to earn a bachelor’s degree. This unique program accepts credits earned from military training, from an Associate of Applied Science degree, or from other university credits. It may also facilitate graduation for students who are returning to college after spending time in the workplace. Interested students should contact the BAAS Program office at 940-369-8129 or cacs@unt.edu ."
+        ],
+        "lists": [],
+        "subsections": []
+      },
+      {
+        "title": "Degree requirements",
+        "level": 2,
+        "paragraphs": [],
+        "lists": [],
+        "subsections": [
+          {
+            "title": "Hours required and general/college requirements",
+            "level": 3,
+            "paragraphs": [
+              "A minimum of 120 semester hours, of which 36 must be advanced, and fulfillment of degree requirements for the Bachelor of Applied Arts and Sciences degree as specified in the General Degree Requirements in the Academics section of this catalog and the College of Applied and Collaborative Studies requirements."
+            ],
+            "lists": [],
+            "subsections": []
+          },
+          {
+            "title": "Major requirements",
+            "level": 3,
+            "paragraphs": [],
+            "lists": [],
+            "subsections": [
+              {
+                "title": "Occupational specialization, 21 hours",
+                "level": 4,
+                "paragraphs": [
+                  "Comprised of courses related to a specific occupation, field or subject. The occupational specialization often consists of field-specific course work completed for an Associate of Applied Science (AAS) degree at a community college. Active-duty military or veterans may receive credit for technical or other formal training courses under this component of the degree plan. Other students who have not completed an occupational specialization through courses taken in a community college or in the military may create one by selecting a primary area of study, in consultation with an advisor."
+                ],
+                "lists": [],
+                "subsections": []
+              },
+              {
+                "title": "Unifying courses, 9 hours",
+                "level": 4,
+                "paragraphs": [
+                  "Three specific courses from the College of Applied and Collaborative Studies that help students sharpen their ability to communicate, analyze information and network effectively. Students must earn a C or better in each of the courses in this component to receive credit toward the degree."
+                ],
+                "lists": [
+                  [
+                    {
+                      "text": "BAAS 3000 - Pathways to Civic Engagement",
+                      "href": "https://catalog.unt.edu/preview_course_nopop.php?catoid=37&coid=172225"
+                    },
+                    {
+                      "text": "BAAS 3020 - Fundamentals of Inquiry and Discovery",
+                      "href": "https://catalog.unt.edu/preview_course_nopop.php?catoid=37&coid=173119"
+                    },
+                    {
+                      "text": "BAAS 4100 - Managing a 21st Century Career",
+                      "href": "https://catalog.unt.edu/preview_course_nopop.php?catoid=37&coid=173654"
+                    }
+                  ]
+                ],
+                "subsections": []
+              },
+              {
+                "title": "Professional development concentrations, 36 hours",
+                "level": 4,
+                "paragraphs": [
+                  "Consists of two or three separate concentrations, each of which will consist of a minimum of 12 credit hours that serve to enhance the skills a student has acquired through prior education or are complimentary to the student’s career plans."
+                ],
+                "lists": [],
+                "subsections": []
+              }
+            ]
+          },
+          {
+            "title": "Focus area",
+            "level": 3,
+            "paragraphs": [
+              "The Industrial Distribution focus area is tailored for working professionals in a trade seeking a Bachelor’s degree for career and personal advancement. The focus area is a hands-on, multidisciplinary specialized area of study a degree where students learn to apply the fundamentals of business, science, technology, and supply chain management to the distribution of industrial and commercial products. No course substitutions in the Focus Area will be made without the written consent of the BAAS Program Director or DMI Department Chair."
+            ],
+            "lists": [
+              [
+                {
+                  "text": "ENGR 3000 - Foundations of Manufacturing",
+                  "href": "https://catalog.unt.edu/preview_course_nopop.php?catoid=37&coid=174027"
+                },
+                {
+                  "text": "INDS 3010 - Digital Trends in Industrial Distribution",
+                  "href": "https://catalog.unt.edu/preview_course_nopop.php?catoid=37&coid=174006"
+                },
+                {
+                  "text": "INDS 3020 - Industrial Channel Selling",
+                  "href": "https://catalog.unt.edu/preview_course_nopop.php?catoid=37&coid=174007"
+                },
+                {
+                  "text": "INDS 3030 - Industrial Computer Science and Informatics",
+                  "href": "https://catalog.unt.edu/preview_course_nopop.php?catoid=37&coid=174003"
+                },
+                {
+                  "text": "INDS 3110 - Industrial Chemistry",
+                  "href": "https://catalog.unt.edu/preview_course_nopop.php?catoid=37&coid=174001"
+                },
+                {
+                  "text": "INDS 3150 - Industrial Cost Management",
+                  "href": "https://catalog.unt.edu/preview_course_nopop.php?catoid=37&coid=174005"
+                },
+                {
+                  "text": "INDS 4040 - Industrial Innovation and Ideation",
+                  "href": "https://catalog.unt.edu/preview_course_nopop.php?catoid=37&coid=174015"
+                },
+                {
+                  "text": "LSCM 3960 - Logistics and Supply Chain Management",
+                  "href": "https://catalog.unt.edu/preview_course_nopop.php?catoid=37&coid=171588"
+                }
+              ]
+            ],
+            "subsections": []
+          },
+          {
+            "title": "Electives",
+            "level": 3,
+            "paragraphs": [
+              "Any UNT or transfer courses the student and advisor deem appropriate to the degree may be selected. Caution must be exercised to ensure the student fulfills the university requirement of 36 hours of advanced-level course work."
+            ],
+            "lists": [],
+            "subsections": []
+          },
+          {
+            "title": "Other requirements",
+            "level": 3,
+            "paragraphs": [
+              "A total of 36 hours of upper-division work. At least 24 hours of upper-division work in residence."
+            ],
+            "lists": [],
+            "subsections": []
+          },
+          {
+            "title": "Note",
+            "level": 3,
+            "paragraphs": [
+              "A lower-level transfer course that is determined to be equivalent to a UNT upper-level course does not satisfy the requirement for advanced hours.",
+              "Departmental consent is required for students wishing to apply for up to 6 credit hours of university-approved Prior Learning Credit for non-traditional learning experiences in transfer to satisfy CACS degree requirements."
+            ],
+            "lists": [],
+            "subsections": []
+          }
+        ]
+      }
+    ]
   }
 }

@@ -23,7 +23,7 @@ import os
 import re
 from dataclasses import dataclass
 from typing import Any, Iterable
-from urllib.parse import parse_qs, urljoin, urlparse
+from urllib.parse import parse_qs, urlencode, urljoin, urlparse, urlunparse
 
 try:
     import aiohttp  # type: ignore
@@ -101,13 +101,52 @@ def normalize_heading(text: str) -> str:
     return clean_text(text).lower()
 
 
+def strip_returnto(url: str) -> str:
+    """
+    Remove any 'returnto' query param from a URL.
+
+    This covers the case where URLs include `&returnto=4292` (or similar) and ensures
+    our saved links are stable/clean.
+    """
+    parsed = urlparse(url)
+    qs = parse_qs(parsed.query, keep_blank_values=True)
+    if "returnto" not in qs:
+        return url
+    qs.pop("returnto", None)
+    return urlunparse(parsed._replace(query=urlencode(qs, doseq=True)))
+
+
+def course_url_from_onclick(onclick: str | None) -> str | None:
+    """
+    Build a preview_course_nopop URL from onclick="showCourse('catoid','coid',...)"
+
+    showCourse() format (as seen on UNT pages):
+      showCourse('37', '170683', this, '...')
+
+    Result:
+      https://catalog.unt.edu/preview_course_nopop.php?catoid=37&coid=170683
+    """
+    if not onclick:
+        return None
+    m = re.search(
+        r"showCourse\(\s*['\"](?P<catoid>\d+)['\"]\s*,\s*['\"](?P<coid>\d+)['\"]",
+        onclick,
+        flags=re.I,
+    )
+    if not m:
+        return None
+    catoid = m.group("catoid")
+    coid = m.group("coid")
+    return f"https://catalog.unt.edu/preview_course_nopop.php?catoid={catoid}&coid={coid}"
+
+
 def ensure_abs_url(base_url: str, href: str | None) -> str | None:
     if not href:
         return None
     href = href.strip()
     if not href or href == "#":
         return None
-    return urljoin(base_url, href)
+    return strip_returnto(urljoin(base_url, href))
 
 
 def poid_suffix(url: str) -> str | None:
@@ -198,7 +237,19 @@ def main_content_container(soup: BeautifulSoup) -> Tag:
     Pick a container that mostly includes the program content (not nav/headers).
     We keep a few fallbacks because the catalog HTML can change.
     """
-    for selector in ("#acalog-content", "td.block_content", "div#content", "body"):
+    # On UNT catalog pages, id="acalog-content" is commonly on the H1 program title,
+    # not a wrapper div. Treat it as an *anchor* and climb to the real content.
+    anchor = soup.find(id="acalog-content")
+    if isinstance(anchor, Tag):
+        # Best: the main content cell.
+        td = anchor.find_parent("td", class_="block_content")
+        if isinstance(td, Tag):
+            return td
+        # Otherwise, use a parent container (still better than the H1 itself).
+        if isinstance(anchor.parent, Tag):
+            return anchor.parent
+
+    for selector in ("td.block_content", "div#content", "body"):
         node = soup.select_one(selector)
         if isinstance(node, Tag):
             return node
@@ -224,10 +275,23 @@ def add_list_from_tag(section: dict[str, Any], list_tag: Tag, base_url: str) -> 
         if not text:
             continue
         item: dict[str, str] = {"text": text}
+
+        # Course list items (li.acalog-course) typically have href="#", but include
+        # onclick="showCourse('catoid','coid',...)" which we can convert into a stable URL.
         if a:
-            href = ensure_abs_url(base_url, a.get("href"))
-            if href:
-                item["href"] = href
+            onclick = a.get("onclick") or a.get("onClick")
+            is_course = "acalog-course" in (li.get("class") or []) or (
+                isinstance(onclick, str) and "showCourse" in onclick
+            )
+            if is_course:
+                course_url = course_url_from_onclick(onclick if isinstance(onclick, str) else None)
+                if course_url:
+                    item["href"] = course_url
+            else:
+                href = ensure_abs_url(base_url, a.get("href"))
+                if href:
+                    item["href"] = href
+
         items.append(item)
     if items:
         section["lists"].append(items)
