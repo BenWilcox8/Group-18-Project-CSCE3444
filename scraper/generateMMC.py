@@ -18,6 +18,7 @@ Notes:
 from __future__ import annotations
 
 import asyncio
+import csv
 import json
 import os
 import re
@@ -75,6 +76,16 @@ STOP_HEADING_PREFIX = "four-year degree plan"
 # Set to an integer (e.g. 10) to only scrape the first N majors for quicker test runs.
 # Set to None to scrape all majors.
 MAJOR_SCRAPE_LIMIT: int | None = 10
+
+# ----------------------------
+# Optional: extra majors to scrape (manual testing)
+# ----------------------------
+# Paste any program URLs here to force-include them in the scrape, even if they
+# don't appear in the first N majors chosen by MAJOR_SCRAPE_LIMIT.
+#
+# Example:
+#   "https://catalog.unt.edu/preview_program.php?catoid=37&poid=18980"
+EXTRA_MAJOR_URLS: list[str] = []
 
 def require_dependencies() -> None:
     missing: list[str] = []
@@ -260,6 +271,7 @@ def new_section(title: str, level: int) -> dict[str, Any]:
     return {
         "title": title,
         "level": level,
+        "hours": None,  # inferred int hours, when detectable
         "paragraphs": [],
         "lists": [],  # each list is [{"text": ..., "href"?: ...}, ...]
         "subsections": [],
@@ -295,6 +307,128 @@ def add_list_from_tag(section: dict[str, Any], list_tag: Tag, base_url: str) -> 
         items.append(item)
     if items:
         section["lists"].append(items)
+
+
+HOURS_PATTERNS: list[re.Pattern[str]] = [
+    # Common: "48 hours", "46 semester hours", "3 advanced hours", "15 additional hours"
+    re.compile(
+        r"\b(?P<hours>\d{1,3})\s+(?:(?:total|additional|advanced|upper-division|upper division|semester)\s+)?hours?\b",
+        re.I,
+    ),
+    # "at least 48 hours"
+    re.compile(r"\bat\s+least\s+(?P<hours>\d{1,3})\s+hours?\b", re.I),
+    # "minimum of 46 semester hours"
+    re.compile(r"\bminimum\s+of\s+(?P<hours>\d{1,3})\s+(?:semester\s+)?hours?\b", re.I),
+    # "Plus 3 hours ..."
+    re.compile(r"\bplus\s+(?P<hours>\d{1,3})\s+hours?\b", re.I),
+]
+
+
+def extract_hours_from_text(text: str) -> list[int]:
+    text = clean_text(text)
+    out: list[int] = []
+    for pat in HOURS_PATTERNS:
+        for m in pat.finditer(text):
+            try:
+                out.append(int(m.group("hours")))
+            except Exception:
+                continue
+    return out
+
+
+def infer_section_hours(section: dict[str, Any]) -> tuple[int | None, list[int]]:
+    """
+    Infer a single hours value from a section title + paragraphs.
+
+    Heuristic:
+    - Prefer matches from the title.
+    - Else, use matches from paragraphs (first match).
+    - If multiple distinct values found, return None and list all candidates.
+    """
+    candidates: list[int] = []
+    title_vals = extract_hours_from_text(str(section.get("title", "")))
+    para_vals: list[int] = []
+    for p in section.get("paragraphs", []) or []:
+        para_vals.extend(extract_hours_from_text(str(p)))
+
+    candidates.extend(title_vals)
+    candidates.extend(para_vals)
+
+    distinct = list(dict.fromkeys(candidates))  # stable unique
+    if not distinct:
+        return None, []
+    if len(distinct) == 1:
+        return distinct[0], distinct
+    # Multiple values. If title has exactly one, prefer that (common for "X hours ..." titles).
+    title_distinct = list(dict.fromkeys(title_vals))
+    if len(title_distinct) == 1:
+        return title_distinct[0], distinct
+    return None, distinct
+
+
+def section_contains_course_list(section: dict[str, Any]) -> bool:
+    for lst in section.get("lists", []) or []:
+        for item in lst or []:
+            href = str(item.get("href", ""))
+            if "preview_course_nopop.php" in href and "coid=" in href and "catoid=" in href:
+                return True
+    return False
+
+
+def walk_sections(sections: list[dict[str, Any]], path: list[str] | None = None) -> Iterable[tuple[list[str], dict[str, Any]]]:
+    path = path or []
+    for sec in sections:
+        title = str(sec.get("title", ""))
+        cur_path = [*path, title] if title else path
+        yield cur_path, sec
+        subs = sec.get("subsections", []) or []
+        if subs:
+            yield from walk_sections(subs, cur_path)
+
+
+def program_name_from_html(html: str) -> str | None:
+    soup = BeautifulSoup(html, "html.parser")
+    h1 = soup.find("h1", id="acalog-content")
+    if isinstance(h1, Tag):
+        name = clean_text(h1.get_text(" ", strip=True))
+        return name or None
+    return None
+
+
+def apply_hours_and_collect_errors(
+    *,
+    program_name: str,
+    program_url: str,
+    sections: list[dict[str, Any]],
+    errors: list[dict[str, str]],
+) -> None:
+    for sec_path, sec in walk_sections(sections):
+        hours, candidates = infer_section_hours(sec)
+        sec["hours"] = hours
+
+        # Only require hours for sections that list course items (per user choice "a").
+        if section_contains_course_list(sec) and hours is None:
+            errors.append(
+                {
+                    "type": "missing_hours",
+                    "program_name": program_name,
+                    "program_url": program_url,
+                    "section_path": " > ".join(sec_path),
+                    "candidates": ",".join(str(x) for x in candidates) if candidates else "",
+                    "message": "Could not infer required hours for a section that contains course list items.",
+                }
+            )
+        elif section_contains_course_list(sec) and hours is not None and len(set(candidates)) > 1:
+            errors.append(
+                {
+                    "type": "ambiguous_hours",
+                    "program_name": program_name,
+                    "program_url": program_url,
+                    "section_path": " > ".join(sec_path),
+                    "candidates": ",".join(str(x) for x in candidates),
+                    "message": "Multiple hour values detected; heuristics chose one.",
+                }
+            )
 
 
 def parse_program_page(html: str, program_url: str) -> list[dict[str, Any]]:
@@ -381,15 +515,43 @@ async def scrape_category(index_url: str, category_label: str) -> dict[str, Any]
     Scrape a category (Major/Minor/Certificate) into the final JSON dict keyed by program name.
     """
     sem = asyncio.Semaphore(MAX_CONCURRENT_REQUESTS)
+    errors: list[dict[str, str]] = []
     async with aiohttp.ClientSession() as session:
         index_html = await fetch_text(session, index_url, sem)
         programs = get_program_links(index_html, category_label, base_url=index_url)
         if category_label == "Major" and MAJOR_SCRAPE_LIMIT is not None:
             programs = programs[: max(0, MAJOR_SCRAPE_LIMIT)]
 
-        async def fetch_and_parse(prog: ProgramLink) -> tuple[ProgramLink, list[dict[str, Any]]]:
-            html = await fetch_text(session, prog.url, sem)
-            return prog, parse_program_page(html, prog.url)
+        if category_label == "Major" and EXTRA_MAJOR_URLS:
+            for url in EXTRA_MAJOR_URLS:
+                abs_url = strip_returnto(url.strip())
+                if abs_url:
+                    programs.append(ProgramLink(name="", url=abs_url))
+
+        async def fetch_and_parse(prog: ProgramLink) -> tuple[str, str, list[dict[str, Any]]]:
+            try:
+                html = await fetch_text(session, prog.url, sem)
+                name = prog.name or (program_name_from_html(html) or prog.url)
+                sections = parse_program_page(html, prog.url)
+                apply_hours_and_collect_errors(
+                    program_name=name,
+                    program_url=prog.url,
+                    sections=sections,
+                    errors=errors,
+                )
+                return name, prog.url, sections
+            except Exception as e:  # noqa: BLE001
+                errors.append(
+                    {
+                        "type": "fetch_or_parse_error",
+                        "program_name": prog.name or "",
+                        "program_url": prog.url,
+                        "section_path": "",
+                        "candidates": "",
+                        "message": f"{e.__class__.__name__}: {e}",
+                    }
+                )
+                return prog.name or prog.url, prog.url, []
 
         tasks = [fetch_and_parse(p) for p in programs]
         if async_tqdm is not None:
@@ -398,9 +560,19 @@ async def scrape_category(index_url: str, category_label: str) -> dict[str, Any]
             results = await asyncio.gather(*tasks)
 
     out: dict[str, Any] = {}
-    for prog, sections in results:
-        key = unique_program_key(out, prog.name, prog.url)
-        out[key] = {"url": prog.url, "sections": sections}
+    for name, url, sections in results:
+        key = unique_program_key(out, name, url)
+        out[key] = {"url": url, "sections": sections}
+
+    # Write errors.csv for debugging.
+    errors_path = os.path.join(os.path.dirname(__file__), "errors.csv")
+    with open(errors_path, "w", newline="", encoding="utf-8") as f:
+        writer = csv.DictWriter(
+            f,
+            fieldnames=["type", "program_name", "program_url", "section_path", "candidates", "message"],
+        )
+        writer.writeheader()
+        writer.writerows(errors)
     return out
 
 
