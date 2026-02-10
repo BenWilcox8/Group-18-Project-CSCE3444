@@ -4,7 +4,7 @@ Group-18-Project-CSCE3444
 
 Project Name: Eagle Plan
 
-Project Description
+Project Description:
 Eagle Plan is an intelligent degree planning platform for UNT students that automates transcript auditing, visualizes prerequisite chains, and simplifies semester scheduling through a drag-and-drop interface.
 
 Team Roster
