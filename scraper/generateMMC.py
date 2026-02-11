@@ -75,7 +75,7 @@ STOP_HEADING_PREFIX = "four-year degree plan"
 # ----------------------------
 # Set to an integer (e.g. 10) to only scrape the first N majors for quicker test runs.
 # Set to None to scrape all majors.
-MAJOR_SCRAPE_LIMIT: int | None = 10
+MAJOR_SCRAPE_LIMIT: int | None = None
 
 # ----------------------------
 # Optional: extra majors to scrape (manual testing)
