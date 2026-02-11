@@ -1,0 +1,603 @@
+{
+  "English with a concentration in Creative Writing, BA": {
+    "url": "https://catalog.unt.edu/preview_program.php?catoid=37&poid=18760",
+    "sections": [
+      {
+        "title": "Overview",
+        "level": 2,
+        "hours": null,
+        "paragraphs": [
+          "The English department plays a pivotal role in developing a student’s writing and critical analysis skills. While pursuing the Bachelor of Arts with a major in English, you can choose from concentrations in literature, writing and rhetoric, creative writing and language arts with secondary teacher certification."
+        ],
+        "lists": [],
+        "subsections": []
+      },
+      {
+        "title": "Degree requirements",
+        "level": 2,
+        "hours": null,
+        "paragraphs": [],
+        "lists": [],
+        "subsections": []
+      },
+      {
+        "title": "Hours required and general/college requirements",
+        "level": 2,
+        "hours": 120,
+        "paragraphs": [
+          "A minimum of 120 semester hours, of which 42 must be advanced, and fulfillment of degree requirements for the Bachelor of Arts degree as specified in the “General University Requirements” in the Academic policies section of this catalog and, the University Core Curriculum and the College of Liberal Arts and Social Sciences requirements."
+        ],
+        "lists": [],
+        "subsections": []
+      },
+      {
+        "title": "Major requirements, 45 hours",
+        "level": 2,
+        "hours": 45,
+        "paragraphs": [],
+        "lists": [],
+        "subsections": [
+          {
+            "title": "Foundation courses, 12 hours",
+            "level": 3,
+            "hours": 12,
+            "paragraphs": [
+              "Note: ENGL 3000 should be taken in the first 18 hours of English course work."
+            ],
+            "lists": [
+              [
+                {
+                  "text": "ENGL 1310 - First-Year Writing I",
+                  "href": "https://catalog.unt.edu/preview_course_nopop.php?catoid=37&coid=171012"
+                },
+                {
+                  "text": "ENGL 1320 - First-Year Writing II",
+                  "href": "https://catalog.unt.edu/preview_course_nopop.php?catoid=37&coid=171016"
+                },
+                {
+                  "text": "ENGL 3000 - Introduction to Literary Analysis",
+                  "href": "https://catalog.unt.edu/preview_course_nopop.php?catoid=37&coid=171031"
+                }
+              ]
+            ],
+            "subsections": [
+              {
+                "title": "One of the following courses",
+                "level": 4,
+                "hours": null,
+                "paragraphs": [],
+                "lists": [
+                  [
+                    {
+                      "text": "ENGL 2321 - British Literature",
+                      "href": "https://catalog.unt.edu/preview_course_nopop.php?catoid=37&coid=173809"
+                    },
+                    {
+                      "text": "ENGL 2326 - American Literature",
+                      "href": "https://catalog.unt.edu/preview_course_nopop.php?catoid=37&coid=173810"
+                    },
+                    {
+                      "text": "ENGL 2331 - World Literature",
+                      "href": "https://catalog.unt.edu/preview_course_nopop.php?catoid=37&coid=173811"
+                    },
+                    {
+                      "text": "ENGL 2341 - Forms of Literature",
+                      "href": "https://catalog.unt.edu/preview_course_nopop.php?catoid=37&coid=173447"
+                    },
+                    {
+                      "text": "ENGL 2351 - Mexican American Literature",
+                      "href": "https://catalog.unt.edu/preview_course_nopop.php?catoid=37&coid=173808"
+                    }
+                  ]
+                ],
+                "subsections": []
+              }
+            ]
+          },
+          {
+            "title": "Creative writing concentration, 18 hours",
+            "level": 3,
+            "hours": 18,
+            "paragraphs": [],
+            "lists": [],
+            "subsections": [
+              {
+                "title": "Required courses, 12 hours",
+                "level": 4,
+                "hours": 12,
+                "paragraphs": [
+                  "Note: Majors in English with a concentration in creative writing must take ENGL 2100 before enrolling in an beginning workshop, and a beginning course in genre is a prerequisite for advanced in same genre. Transfer students should see the English Faculty Advisor for approved ENGL 2100 substitutes."
+                ],
+                "lists": [
+                  [
+                    {
+                      "text": "ENGL 2100 - Introduction to Creative Writing",
+                      "href": "https://catalog.unt.edu/preview_course_nopop.php?catoid=37&coid=171020"
+                    },
+                    {
+                      "text": "ENGL 3140 - Beginning Fiction Writing",
+                      "href": "https://catalog.unt.edu/preview_course_nopop.php?catoid=37&coid=171034"
+                    },
+                    {
+                      "text": "ENGL 3150 - Beginning Poetry Writing",
+                      "href": "https://catalog.unt.edu/preview_course_nopop.php?catoid=37&coid=171035"
+                    },
+                    {
+                      "text": "ENGL 3160 - Beginning Creative Nonfiction Writing",
+                      "href": "https://catalog.unt.edu/preview_course_nopop.php?catoid=37&coid=171036"
+                    }
+                  ]
+                ],
+                "subsections": []
+              },
+              {
+                "title": "Advanced workshops, 6 hours",
+                "level": 4,
+                "hours": 6,
+                "paragraphs": [],
+                "lists": [
+                  [
+                    {
+                      "text": "ENGL 4100 - Advanced Fiction Writing",
+                      "href": "https://catalog.unt.edu/preview_course_nopop.php?catoid=37&coid=171054"
+                    },
+                    {
+                      "text": "ENGL 4110 - Advanced Poetry Writing",
+                      "href": "https://catalog.unt.edu/preview_course_nopop.php?catoid=37&coid=171055"
+                    },
+                    {
+                      "text": "ENGL 4120 - Advanced Creative Nonfiction Writing",
+                      "href": "https://catalog.unt.edu/preview_course_nopop.php?catoid=37&coid=171056"
+                    }
+                  ]
+                ],
+                "subsections": []
+              }
+            ]
+          },
+          {
+            "title": "Additional requirements, 15 hours",
+            "level": 3,
+            "hours": 15,
+            "paragraphs": [],
+            "lists": [],
+            "subsections": [
+              {
+                "title": "Two courses from the following historical or genre surveys, 6 hours",
+                "level": 4,
+                "hours": 6,
+                "paragraphs": [],
+                "lists": [
+                  [
+                    {
+                      "text": "ENGL 3360 - Classical Literature and Mythology",
+                      "href": "https://catalog.unt.edu/preview_course_nopop.php?catoid=37&coid=171038"
+                    },
+                    {
+                      "text": "ENGL 3370 - The Bible as Literature",
+                      "href": "https://catalog.unt.edu/preview_course_nopop.php?catoid=37&coid=174307"
+                    },
+                    {
+                      "text": "ENGL 3430 - British Literature to 1780",
+                      "href": "https://catalog.unt.edu/preview_course_nopop.php?catoid=37&coid=171039"
+                    },
+                    {
+                      "text": "ENGL 3440 - British Anglophone Literature 1780 to the Present",
+                      "href": "https://catalog.unt.edu/preview_course_nopop.php?catoid=37&coid=171040"
+                    },
+                    {
+                      "text": "ENGL 3450 - Short Story",
+                      "href": "https://catalog.unt.edu/preview_course_nopop.php?catoid=37&coid=171041"
+                    },
+                    {
+                      "text": "ENGL 3455 - Dramatic Literature",
+                      "href": "https://catalog.unt.edu/preview_course_nopop.php?catoid=37&coid=174415"
+                    },
+                    {
+                      "text": "ENGL 3465 - The Literary Essay",
+                      "href": "https://catalog.unt.edu/preview_course_nopop.php?catoid=37&coid=178328"
+                    },
+                    {
+                      "text": "ENGL 3470 - Poetry",
+                      "href": "https://catalog.unt.edu/preview_course_nopop.php?catoid=37&coid=178329"
+                    },
+                    {
+                      "text": "ENGL 3830 - American Literature to 1870",
+                      "href": "https://catalog.unt.edu/preview_course_nopop.php?catoid=37&coid=171042"
+                    },
+                    {
+                      "text": "ENGL 3840 - American Literature 1870 to the Present",
+                      "href": "https://catalog.unt.edu/preview_course_nopop.php?catoid=37&coid=171043"
+                    },
+                    {
+                      "text": "ENGL 3920 - Ethnic American Literatures",
+                      "href": "https://catalog.unt.edu/preview_course_nopop.php?catoid=37&coid=171049"
+                    },
+                    {
+                      "text": "ENGL 3924 - Women’s Literature",
+                      "href": "https://catalog.unt.edu/preview_course_nopop.php?catoid=37&coid=171053"
+                    }
+                  ]
+                ],
+                "subsections": []
+              },
+              {
+                "title": "One single or dual author course, 3 hours",
+                "level": 4,
+                "hours": 3,
+                "paragraphs": [],
+                "lists": [
+                  [
+                    {
+                      "text": "ENGL 4410 - Chaucer",
+                      "href": "https://catalog.unt.edu/preview_course_nopop.php?catoid=37&coid=171066"
+                    },
+                    {
+                      "text": "ENGL 4430 - Shakespeare",
+                      "href": "https://catalog.unt.edu/preview_course_nopop.php?catoid=37&coid=171068"
+                    },
+                    {
+                      "text": "ENGL 4440 - Milton",
+                      "href": "https://catalog.unt.edu/preview_course_nopop.php?catoid=37&coid=171069"
+                    },
+                    {
+                      "text": "ENGL 4450 - Special Studies in a Single or Dual Author(s)",
+                      "href": "https://catalog.unt.edu/preview_course_nopop.php?catoid=37&coid=171070"
+                    }
+                  ]
+                ],
+                "subsections": []
+              },
+              {
+                "title": "Two additional courses, each from different categories, 6 hours",
+                "level": 4,
+                "hours": 6,
+                "paragraphs": [
+                  "Note: Courses that appear in more than one category may only be used to satisfy one category; a course used to satisfy a requirement listed above may not also be used to satisfy a category listed below."
+                ],
+                "lists": [],
+                "subsections": [
+                  {
+                    "title": "Critical theory, writing studies and game studies",
+                    "level": 5,
+                    "hours": null,
+                    "paragraphs": [
+                      "Additional courses may apply. See faculty advisor for approvals."
+                    ],
+                    "lists": [
+                      [
+                        {
+                          "text": "ENGL 4130 - Editing and Publishing",
+                          "href": "https://catalog.unt.edu/preview_course_nopop.php?catoid=37&coid=173813"
+                        },
+                        {
+                          "text": "ENGL 4140 - Advanced Narrative Design for Gaming",
+                          "href": "https://catalog.unt.edu/preview_course_nopop.php?catoid=37&coid=174377"
+                        },
+                        {
+                          "text": "ENGL 4145 - Worldbuilding and Mythopoesis",
+                          "href": "https://catalog.unt.edu/preview_course_nopop.php?catoid=37&coid=178250"
+                        },
+                        {
+                          "text": "ENGL 4150 - Literary Criticism",
+                          "href": "https://catalog.unt.edu/preview_course_nopop.php?catoid=37&coid=171057"
+                        },
+                        {
+                          "text": "ENGL 4195 - Advanced Grammar and Usage",
+                          "href": "https://catalog.unt.edu/preview_course_nopop.php?catoid=37&coid=171060"
+                        },
+                        {
+                          "text": "ENGL 4200 - Studies in Modern Rhetoric",
+                          "href": "https://catalog.unt.edu/preview_course_nopop.php?catoid=37&coid=171061"
+                        },
+                        {
+                          "text": "ENGL 4205 - Multimodal Writing and Rhetoric",
+                          "href": "https://catalog.unt.edu/preview_course_nopop.php?catoid=37&coid=178247"
+                        },
+                        {
+                          "text": "ENGL 4210 - Advanced Studies in Writing",
+                          "href": "https://catalog.unt.edu/preview_course_nopop.php?catoid=37&coid=173337"
+                        },
+                        {
+                          "text": "ENGL 4215 - Advocacy and Action: Rhetoric and Writing in Communities",
+                          "href": "https://catalog.unt.edu/preview_course_nopop.php?catoid=37&coid=178246"
+                        },
+                        {
+                          "text": "ENGL 4225 - Rhetorical Play: Writing and Rhetoric in Gaming",
+                          "href": "https://catalog.unt.edu/preview_course_nopop.php?catoid=37&coid=178348"
+                        },
+                        {
+                          "text": "ENGL 4230 - Special Topics in Rhetoric and Writing Studies",
+                          "href": "https://catalog.unt.edu/preview_course_nopop.php?catoid=37&coid=171062"
+                        },
+                        {
+                          "text": "ENGL 4240 - Writing Center Theory and Practice",
+                          "href": "https://catalog.unt.edu/preview_course_nopop.php?catoid=37&coid=173771"
+                        },
+                        {
+                          "text": "ENGL 4245 - Postcolonial Literature and Theory",
+                          "href": "https://catalog.unt.edu/preview_course_nopop.php?catoid=37&coid=173790"
+                        },
+                        {
+                          "text": "ENGL 4255 - Mexican American Non-Fiction and Criticism",
+                          "href": "https://catalog.unt.edu/preview_course_nopop.php?catoid=37&coid=173042"
+                        },
+                        {
+                          "text": "ENGL 4285 - Africana Theory and Criticism",
+                          "href": "https://catalog.unt.edu/preview_course_nopop.php?catoid=37&coid=174206"
+                        },
+                        {
+                          "text": "ENGL 4680 - Game Narratives as Literature",
+                          "href": "https://catalog.unt.edu/preview_course_nopop.php?catoid=37&coid=173806"
+                        },
+                        {
+                          "text": "Additional courses may apply. See faculty advisor for approvals."
+                        }
+                      ]
+                    ],
+                    "subsections": []
+                  },
+                  {
+                    "title": "Race, ethnicity and indigeneity",
+                    "level": 5,
+                    "hours": null,
+                    "paragraphs": [
+                      "Additional courses may apply. See faculty advisor for approvals."
+                    ],
+                    "lists": [
+                      [
+                        {
+                          "text": "ENGL 4220 - Contemporary North American Indigenous Literature",
+                          "href": "https://catalog.unt.edu/preview_course_nopop.php?catoid=37&coid=173040"
+                        },
+                        {
+                          "text": "ENGL 4245 - Postcolonial Literature and Theory",
+                          "href": "https://catalog.unt.edu/preview_course_nopop.php?catoid=37&coid=173790"
+                        },
+                        {
+                          "text": "ENGL 4250 - Latinx Literature",
+                          "href": "https://catalog.unt.edu/preview_course_nopop.php?catoid=37&coid=171051"
+                        },
+                        {
+                          "text": "ENGL 4255 - Mexican American Non-Fiction and Criticism",
+                          "href": "https://catalog.unt.edu/preview_course_nopop.php?catoid=37&coid=173042"
+                        },
+                        {
+                          "text": "ENGL 4260 - African American Literature",
+                          "href": "https://catalog.unt.edu/preview_course_nopop.php?catoid=37&coid=171050"
+                        },
+                        {
+                          "text": "ENGL 4270 - Modern Jewish Literature",
+                          "href": "https://catalog.unt.edu/preview_course_nopop.php?catoid=37&coid=171052"
+                        },
+                        {
+                          "text": "ENGL 4280 - Africana Literature, Media and Culture",
+                          "href": "https://catalog.unt.edu/preview_course_nopop.php?catoid=37&coid=174205"
+                        },
+                        {
+                          "text": "ENGL 4285 - Africana Theory and Criticism",
+                          "href": "https://catalog.unt.edu/preview_course_nopop.php?catoid=37&coid=174206"
+                        },
+                        {
+                          "text": "ENGL 4660 - Literature and the Holocaust",
+                          "href": "https://catalog.unt.edu/preview_course_nopop.php?catoid=37&coid=171076"
+                        },
+                        {
+                          "text": "ENGL 4841 - Studies in Modern Irish Literature",
+                          "href": "https://catalog.unt.edu/preview_course_nopop.php?catoid=37&coid=173099"
+                        },
+                        {
+                          "text": "Additional courses may apply. See faculty advisor for approvals."
+                        }
+                      ]
+                    ],
+                    "subsections": []
+                  },
+                  {
+                    "title": "Gender, sexuality and the body",
+                    "level": 5,
+                    "hours": null,
+                    "paragraphs": [
+                      "Additional courses may apply. See faculty advisor for approvals."
+                    ],
+                    "lists": [
+                      [
+                        {
+                          "text": "ENGL 3924 - Women’s Literature",
+                          "href": "https://catalog.unt.edu/preview_course_nopop.php?catoid=37&coid=171053"
+                        },
+                        {
+                          "text": "ENGL 4405 - Medieval Women Writers",
+                          "href": "https://catalog.unt.edu/preview_course_nopop.php?catoid=37&coid=173030"
+                        },
+                        {
+                          "text": "ENGL 4630 - Studies in Literature and Medicine",
+                          "href": "https://catalog.unt.edu/preview_course_nopop.php?catoid=37&coid=173488"
+                        },
+                        {
+                          "text": "ENGL 4670 - Gender and Sexuality in Literature",
+                          "href": "https://catalog.unt.edu/preview_course_nopop.php?catoid=37&coid=173449"
+                        },
+                        {
+                          "text": "Additional courses may apply. See faculty advisor for approvals."
+                        }
+                      ]
+                    ],
+                    "subsections": []
+                  },
+                  {
+                    "title": "Early historical period: literature and culture from beginnings to 1800",
+                    "level": 5,
+                    "hours": null,
+                    "paragraphs": [
+                      "Additional courses may apply. See faculty advisor for approvals."
+                    ],
+                    "lists": [
+                      [
+                        {
+                          "text": "ENGL 4405 - Medieval Women Writers",
+                          "href": "https://catalog.unt.edu/preview_course_nopop.php?catoid=37&coid=173030"
+                        },
+                        {
+                          "text": "ENGL 4410 - Chaucer",
+                          "href": "https://catalog.unt.edu/preview_course_nopop.php?catoid=37&coid=171066"
+                        },
+                        {
+                          "text": "ENGL 4430 - Shakespeare",
+                          "href": "https://catalog.unt.edu/preview_course_nopop.php?catoid=37&coid=171068"
+                        },
+                        {
+                          "text": "ENGL 4431 - Studies in Medieval Literature",
+                          "href": "https://catalog.unt.edu/preview_course_nopop.php?catoid=37&coid=173044"
+                        },
+                        {
+                          "text": "ENGL 4432 - Studies in Renaissance Literature",
+                          "href": "https://catalog.unt.edu/preview_course_nopop.php?catoid=37&coid=173045"
+                        },
+                        {
+                          "text": "ENGL 4433 - Studies in Restoration and 18th Century British Literature",
+                          "href": "https://catalog.unt.edu/preview_course_nopop.php?catoid=37&coid=173046"
+                        },
+                        {
+                          "text": "ENGL 4440 - Milton",
+                          "href": "https://catalog.unt.edu/preview_course_nopop.php?catoid=37&coid=171069"
+                        },
+                        {
+                          "text": "ENGL 4830 - Studies in the Literature of the Colonial Americas",
+                          "href": "https://catalog.unt.edu/preview_course_nopop.php?catoid=37&coid=173036"
+                        },
+                        {
+                          "text": "ENGL 4831 - Studies in the Literature of the Eighteenth-Century Americas",
+                          "href": "https://catalog.unt.edu/preview_course_nopop.php?catoid=37&coid=173097"
+                        },
+                        {
+                          "text": "Additional courses may apply. See faculty advisor for approvals."
+                        }
+                      ]
+                    ],
+                    "subsections": []
+                  },
+                  {
+                    "title": "Middle historical period: literature and culture from 1800-1950",
+                    "level": 5,
+                    "hours": null,
+                    "paragraphs": [
+                      "Additional courses may apply. See faculty advisor for approvals."
+                    ],
+                    "lists": [
+                      [
+                        {
+                          "text": "ENGL 4434 - Studies in Romantic Literature",
+                          "href": "https://catalog.unt.edu/preview_course_nopop.php?catoid=37&coid=173047"
+                        },
+                        {
+                          "text": "ENGL 4435 - Studies in Victorian Literature",
+                          "href": "https://catalog.unt.edu/preview_course_nopop.php?catoid=37&coid=173048"
+                        },
+                        {
+                          "text": "ENGL 4490 - American Realism",
+                          "href": "https://catalog.unt.edu/preview_course_nopop.php?catoid=37&coid=173043"
+                        },
+                        {
+                          "text": "ENGL 4832 - Studies in 19th-Century American Literature",
+                          "href": "https://catalog.unt.edu/preview_course_nopop.php?catoid=37&coid=173098"
+                        },
+                        {
+                          "text": "ENGL 4841 - Studies in Modern Irish Literature",
+                          "href": "https://catalog.unt.edu/preview_course_nopop.php?catoid=37&coid=173099"
+                        },
+                        {
+                          "text": "ENGL 4842 - Studies in British Modernism",
+                          "href": "https://catalog.unt.edu/preview_course_nopop.php?catoid=37&coid=173100"
+                        },
+                        {
+                          "text": "ENGL 4844 - Studies in American Modernism",
+                          "href": "https://catalog.unt.edu/preview_course_nopop.php?catoid=37&coid=173101"
+                        },
+                        {
+                          "text": "Additional courses may apply. See faculty advisor for approvals."
+                        }
+                      ]
+                    ],
+                    "subsections": []
+                  },
+                  {
+                    "title": "Late historical period: literature and culture from 1950 to the present",
+                    "level": 5,
+                    "hours": null,
+                    "paragraphs": [
+                      "Additional courses may apply. See faculty advisor for approvals."
+                    ],
+                    "lists": [
+                      [
+                        {
+                          "text": "ENGL 4220 - Contemporary North American Indigenous Literature",
+                          "href": "https://catalog.unt.edu/preview_course_nopop.php?catoid=37&coid=173040"
+                        },
+                        {
+                          "text": "ENGL 4610 - Children’s and Young Adult Literature",
+                          "href": "https://catalog.unt.edu/preview_course_nopop.php?catoid=37&coid=173812"
+                        },
+                        {
+                          "text": "ENGL 4660 - Literature and the Holocaust",
+                          "href": "https://catalog.unt.edu/preview_course_nopop.php?catoid=37&coid=171076"
+                        },
+                        {
+                          "text": "ENGL 4665 - Studies in Science Fiction",
+                          "href": "https://catalog.unt.edu/preview_course_nopop.php?catoid=37&coid=173805"
+                        },
+                        {
+                          "text": "ENGL 4680 - Game Narratives as Literature",
+                          "href": "https://catalog.unt.edu/preview_course_nopop.php?catoid=37&coid=173806"
+                        },
+                        {
+                          "text": "ENGL 4845 - Studies in Contemporary American Literature",
+                          "href": "https://catalog.unt.edu/preview_course_nopop.php?catoid=37&coid=173102"
+                        },
+                        {
+                          "text": "Additional courses may apply. See faculty advisor for approvals."
+                        }
+                      ]
+                    ],
+                    "subsections": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Other course requirements",
+        "level": 2,
+        "hours": null,
+        "paragraphs": [
+          "None."
+        ],
+        "lists": [],
+        "subsections": []
+      },
+      {
+        "title": "Electives",
+        "level": 2,
+        "hours": null,
+        "paragraphs": [
+          "Hours required for electives may vary based on course selection and the University Core Curriculum requirements . Electives may be required to satisfy the advanced hour requirement (42) and/or the minimum total hours required for the degree. For specific information, see an academic advisor in the College of Liberal Arts and Social Sciences."
+        ],
+        "lists": [],
+        "subsections": []
+      },
+      {
+        "title": "Other requirements",
+        "level": 2,
+        "hours": null,
+        "paragraphs": [
+          "A minimum grade of C in each is required for all English courses counting toward the Bachelor of Arts degree in English and a concentration in creative writing.",
+          "A minimum cumulative GPA of 2.5 for all English courses is required for graduation."
+        ],
+        "lists": [],
+        "subsections": []
+      }
+    ]
+  }
+}

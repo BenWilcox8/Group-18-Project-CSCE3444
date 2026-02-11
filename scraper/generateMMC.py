@@ -22,6 +22,7 @@ import csv
 import json
 import os
 import re
+import sqlite3
 from dataclasses import dataclass
 from typing import Any, Iterable
 from urllib.parse import parse_qs, urlencode, urljoin, urlparse, urlunparse
@@ -75,7 +76,7 @@ STOP_HEADING_PREFIX = "four-year degree plan"
 # ----------------------------
 # Set to an integer (e.g. 10) to only scrape the first N majors for quicker test runs.
 # Set to None to scrape all majors.
-MAJOR_SCRAPE_LIMIT: int | None = None
+MAJOR_SCRAPE_LIMIT: int | None = 0
 
 # ----------------------------
 # Optional: extra majors to scrape (manual testing)
@@ -85,7 +86,7 @@ MAJOR_SCRAPE_LIMIT: int | None = None
 #
 # Example:
 #   "https://catalog.unt.edu/preview_program.php?catoid=37&poid=18980"
-EXTRA_MAJOR_URLS: list[str] = []
+EXTRA_MAJOR_URLS: list[str] = ["https://catalog.unt.edu/preview_program.php?catoid=37&poid=18760"]
 
 def require_dependencies() -> None:
     missing: list[str] = []
@@ -431,6 +432,79 @@ def apply_hours_and_collect_errors(
             )
 
 
+def is_unt_course_link(url: str) -> bool:
+    # Matches the same format stored in courses.db AllCatalog.course_link
+    return (
+        url.startswith("https://catalog.unt.edu/preview_course_nopop.php?")
+        and "catoid=" in url
+        and "coid=" in url
+    )
+
+
+def load_course_link_to_main_course_id(db_path: str) -> dict[str, int]:
+    """
+    Load a lookup from AllCatalog.course_link -> AllCatalog.main_course_id.
+
+    We expect course_link strings to look like:
+      https://catalog.unt.edu/preview_course_nopop.php?catoid=37&coid=170683
+    """
+    if not os.path.exists(db_path):
+        raise FileNotFoundError(f"courses.db not found at: {db_path}")
+
+    conn = sqlite3.connect(db_path)
+    try:
+        cur = conn.cursor()
+        cur.execute("SELECT course_link, main_course_id FROM AllCatalog WHERE course_link IS NOT NULL")
+        out: dict[str, int] = {}
+        for course_link, main_course_id in cur.fetchall():
+            if not course_link:
+                continue
+            # Keep the first seen mapping; duplicates should agree.
+            if course_link not in out and main_course_id is not None:
+                out[str(course_link)] = int(main_course_id)
+        return out
+    finally:
+        conn.close()
+
+
+def annotate_courses_with_db_ids(
+    *,
+    program_name: str,
+    program_url: str,
+    sections: list[dict[str, Any]],
+    course_link_map: dict[str, int],
+    errors: list[dict[str, str]],
+) -> None:
+    """
+    For each list item in majors.json that links to a UNT course:
+    - add `"course": true`
+    - add `"main_course_id": <int>` matched via courses.db AllCatalog.course_link
+    If no match exists, log an error row to errors.csv.
+    """
+    for sec_path, sec in walk_sections(sections):
+        for lst in sec.get("lists", []) or []:
+            for item in lst or []:
+                href = str(item.get("href", "")).strip()
+                if not href or not is_unt_course_link(href):
+                    continue
+
+                item["course"] = True
+                main_course_id = course_link_map.get(href)
+                if main_course_id is None:
+                    errors.append(
+                        {
+                            "type": "missing_course_db_match",
+                            "program_name": program_name,
+                            "program_url": program_url,
+                            "section_path": " > ".join(sec_path),
+                            "candidates": "",
+                            "message": f"No matching AllCatalog.course_link in courses.db for href={href}",
+                        }
+                    )
+                else:
+                    item["main_course_id"] = main_course_id
+
+
 def parse_program_page(html: str, program_url: str) -> list[dict[str, Any]]:
     """
     Parse a program page into a heading tree.
@@ -516,6 +590,26 @@ async def scrape_category(index_url: str, category_label: str) -> dict[str, Any]
     """
     sem = asyncio.Semaphore(MAX_CONCURRENT_REQUESTS)
     errors: list[dict[str, str]] = []
+    course_link_map: dict[str, int] = {}
+
+    if category_label == "Major":
+        # Load once up front and reuse for all programs.
+        db_path = os.path.join(os.path.dirname(__file__), "courses.db")
+        try:
+            course_link_map = load_course_link_to_main_course_id(db_path)
+        except Exception as e:  # noqa: BLE001
+            errors.append(
+                {
+                    "type": "courses_db_load_error",
+                    "program_name": "",
+                    "program_url": "",
+                    "section_path": "",
+                    "candidates": "",
+                    "message": f"{e.__class__.__name__}: {e}",
+                }
+            )
+            course_link_map = {}
+
     async with aiohttp.ClientSession() as session:
         index_html = await fetch_text(session, index_url, sem)
         programs = get_program_links(index_html, category_label, base_url=index_url)
@@ -539,6 +633,14 @@ async def scrape_category(index_url: str, category_label: str) -> dict[str, Any]
                     sections=sections,
                     errors=errors,
                 )
+                if category_label == "Major" and course_link_map:
+                    annotate_courses_with_db_ids(
+                        program_name=name,
+                        program_url=prog.url,
+                        sections=sections,
+                        course_link_map=course_link_map,
+                        errors=errors,
+                    )
                 return name, prog.url, sections
             except Exception as e:  # noqa: BLE001
                 errors.append(
