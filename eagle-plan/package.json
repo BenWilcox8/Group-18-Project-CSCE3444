@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "build:data": "python3 scripts/build_course_hours_index.py",
     "build": "next build",
     "dev": "next dev",
     "lint": "eslint .",

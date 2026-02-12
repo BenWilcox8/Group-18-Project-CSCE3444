@@ -31,6 +31,7 @@ export function Header() {
     { href: "/", label: "Home" },
     { href: "/dashboard", label: "Dashboard" },
     { href: "/planner", label: "Course Planner" },
+    { href: "/selector", label: "Selector" },
     { href: "/compare", label: "Compare Majors" },
     { href: "/settings", label: "Settings" },
   ];

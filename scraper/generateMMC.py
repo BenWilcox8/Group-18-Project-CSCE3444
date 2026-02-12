@@ -441,9 +441,9 @@ def is_unt_course_link(url: str) -> bool:
     )
 
 
-def load_course_link_to_main_course_id(db_path: str) -> dict[str, int]:
+def load_course_link_to_main_catalog_id(db_path: str) -> dict[str, int]:
     """
-    Load a lookup from AllCatalog.course_link -> AllCatalog.main_course_id.
+    Load a lookup from AllCatalog.course_link -> AllCatalog.main_catalog_id.
 
     We expect course_link strings to look like:
       https://catalog.unt.edu/preview_course_nopop.php?catoid=37&coid=170683
@@ -454,14 +454,14 @@ def load_course_link_to_main_course_id(db_path: str) -> dict[str, int]:
     conn = sqlite3.connect(db_path)
     try:
         cur = conn.cursor()
-        cur.execute("SELECT course_link, main_course_id FROM AllCatalog WHERE course_link IS NOT NULL")
+        cur.execute("SELECT course_link, main_catalog_id FROM AllCatalog WHERE course_link IS NOT NULL")
         out: dict[str, int] = {}
-        for course_link, main_course_id in cur.fetchall():
+        for course_link, main_catalog_id in cur.fetchall():
             if not course_link:
                 continue
             # Keep the first seen mapping; duplicates should agree.
-            if course_link not in out and main_course_id is not None:
-                out[str(course_link)] = int(main_course_id)
+            if course_link not in out and main_catalog_id is not None:
+                out[str(course_link)] = int(main_catalog_id)
         return out
     finally:
         conn.close()
@@ -478,7 +478,7 @@ def annotate_courses_with_db_ids(
     """
     For each list item in majors.json that links to a UNT course:
     - add `"course": true`
-    - add `"main_course_id": <int>` matched via courses.db AllCatalog.course_link
+    - add `"main_catalog_id": <int>` matched via courses.db AllCatalog.course_link
     If no match exists, log an error row to errors.csv.
     """
     for sec_path, sec in walk_sections(sections):
@@ -489,8 +489,8 @@ def annotate_courses_with_db_ids(
                     continue
 
                 item["course"] = True
-                main_course_id = course_link_map.get(href)
-                if main_course_id is None:
+                main_catalog_id = course_link_map.get(href)
+                if main_catalog_id is None:
                     errors.append(
                         {
                             "type": "missing_course_db_match",
@@ -502,7 +502,10 @@ def annotate_courses_with_db_ids(
                         }
                     )
                 else:
-                    item["main_course_id"] = main_course_id
+                    item["main_catalog_id"] = main_catalog_id
+                    # In case an older majors.json exists and gets merged by other tooling,
+                    # ensure we don't carry forward the old field name.
+                    item.pop("main_course_id", None)
 
 
 def parse_program_page(html: str, program_url: str) -> list[dict[str, Any]]:
@@ -596,7 +599,7 @@ async def scrape_category(index_url: str, category_label: str) -> dict[str, Any]
         # Load once up front and reuse for all programs.
         db_path = os.path.join(os.path.dirname(__file__), "courses.db")
         try:
-            course_link_map = load_course_link_to_main_course_id(db_path)
+            course_link_map = load_course_link_to_main_catalog_id(db_path)
         except Exception as e:  # noqa: BLE001
             errors.append(
                 {
