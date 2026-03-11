@@ -1,14 +1,12 @@
 "use client";
 
-import React from "react"
-
-import { useState, useCallback } from "react";
+import React, { useState, useCallback } from "react";
 import { Upload, FileText, Check, AlertCircle, Loader2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { cn } from "@/lib/utils";
 
-interface ParsedCourse {
+export interface ParsedCourse {
   code: string;
   name: string;
   credits: number;
@@ -36,27 +34,39 @@ export function TranscriptUpload({ onParsed }: TranscriptUploadProps) {
     setIsDragging(false);
   }, []);
 
-  const simulateParsing = useCallback((fileName: string) => {
+  // REAL PARSING: Sends the PDF to your backend API route
+  const processTranscript = async (uploadedFile: File) => {
     setStatus("parsing");
     
-    // Simulate transcript parsing
-    setTimeout(() => {
-      const mockCourses: ParsedCourse[] = [
-        { code: "CSCE 1030", name: "Computer Science I", credits: 3, grade: "A", semester: "Fall 2023" },
-        { code: "MATH 1710", name: "Calculus I", credits: 4, grade: "B+", semester: "Fall 2023" },
-        { code: "ENGL 1310", name: "College Writing I", credits: 3, grade: "A-", semester: "Fall 2023" },
-        { code: "CSCE 1040", name: "Computer Science II", credits: 3, grade: "A", semester: "Spring 2024" },
-        { code: "MATH 1720", name: "Calculus II", credits: 4, grade: "B", semester: "Spring 2024" },
-        { code: "PHYS 1710", name: "Physics I", credits: 4, grade: "B+", semester: "Spring 2024" },
-        { code: "CSCE 2100", name: "Data Structures", credits: 3, grade: "A-", semester: "Fall 2024" },
-        { code: "MATH 2700", name: "Linear Algebra", credits: 3, grade: "A", semester: "Fall 2024" },
-      ];
+    try {
+      const formData = new FormData();
+      formData.append('file', uploadedFile);
       
-      setParsedCourses(mockCourses);
-      setStatus("success");
-      onParsed?.(mockCourses);
-    }, 2000);
-  }, [onParsed]);
+      const response = await fetch('/api/parse-transcript', {
+        method: 'POST',
+        body: formData,
+      });
+      
+      if (!response.ok) {
+        throw new Error('Server failed to parse transcript');
+      }
+      
+      const data = await response.json();
+      
+      if (data.courses && data.courses.length > 0) {
+        setParsedCourses(data.courses);
+        setStatus("success");
+        onParsed?.(data.courses);
+      } else {
+        // If the array is empty, the Regex didn't catch anything in the text
+        console.error("No courses found. Check the Regex!");
+        setStatus("error");
+      }
+    } catch (error) {
+      console.error(error);
+      setStatus("error");
+    }
+  };
 
   const handleDrop = useCallback((e: React.DragEvent) => {
     e.preventDefault();
@@ -65,18 +75,19 @@ export function TranscriptUpload({ onParsed }: TranscriptUploadProps) {
     const droppedFile = e.dataTransfer.files[0];
     if (droppedFile && (droppedFile.type === "application/pdf" || droppedFile.name.endsWith(".pdf"))) {
       setFile(droppedFile);
-      simulateParsing(droppedFile.name);
+      processTranscript(droppedFile);
     }
-  }, [simulateParsing]);
+  }, [onParsed]);
 
   const handleFileSelect = useCallback((e: React.ChangeEvent<HTMLInputElement>) => {
     const selectedFile = e.target.files?.[0];
     if (selectedFile) {
       setFile(selectedFile);
-      simulateParsing(selectedFile.name);
+      processTranscript(selectedFile);
     }
-  }, [simulateParsing]);
+  }, [onParsed]);
 
+  // Only calculate total credits for classes that were successfully extracted
   const totalCredits = parsedCourses.reduce((sum, course) => sum + course.credits, 0);
 
   return (
