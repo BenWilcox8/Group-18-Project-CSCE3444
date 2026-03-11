@@ -52,8 +52,7 @@ export default function DashboardPage() {
     if (!courses.length) return;
     setTranscriptCourses(courses);
 
-    // UPDATED LOGIC: Explicitly define what a "Passed" class is for degree credit
-    const validPassingGrades = ["A+", "A", "A-", "B+", "B", "B-", "C+", "C", "C-", "D+", "D", "D-", "P", "CR"];
+    const validPassingGrades = ["A+", "A", "A-", "B+", "B", "B-", "C+", "C", "C-", "D+"];
     
     const earnedCredits = courses.reduce((sum, course) => {
       const isPassing = validPassingGrades.includes(course.grade.toUpperCase());
