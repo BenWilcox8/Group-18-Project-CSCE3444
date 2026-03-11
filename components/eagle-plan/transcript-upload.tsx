@@ -23,6 +23,7 @@ export function TranscriptUpload({ onParsed }: TranscriptUploadProps) {
   const [file, setFile] = useState<File | null>(null);
   const [status, setStatus] = useState<"idle" | "parsing" | "success" | "error">("idle");
   const [parsedCourses, setParsedCourses] = useState<ParsedCourse[]>([]);
+  const [errorMessage, setErrorMessage] = useState("");
 
   const handleDragOver = useCallback((e: React.DragEvent) => {
     e.preventDefault();
@@ -34,7 +35,6 @@ export function TranscriptUpload({ onParsed }: TranscriptUploadProps) {
     setIsDragging(false);
   }, []);
 
-  // REAL PARSING: Sends the PDF to your backend API route
   const processTranscript = async (uploadedFile: File) => {
     setStatus("parsing");
     
@@ -48,7 +48,8 @@ export function TranscriptUpload({ onParsed }: TranscriptUploadProps) {
       });
       
       if (!response.ok) {
-        throw new Error('Server failed to parse transcript');
+        const errorData = await response.json();
+        throw new Error(`Server Error: ${errorData.error}`);
       }
       
       const data = await response.json();
@@ -58,12 +59,11 @@ export function TranscriptUpload({ onParsed }: TranscriptUploadProps) {
         setStatus("success");
         onParsed?.(data.courses);
       } else {
-        // If the array is empty, the Regex didn't catch anything in the text
-        console.error("No courses found. Check the Regex!");
-        setStatus("error");
+        throw new Error("No courses found. Check the terminal output to adjust the Regex.");
       }
-    } catch (error) {
+    } catch (error: any) {
       console.error(error);
+      setErrorMessage(error.message);
       setStatus("error");
     }
   };
@@ -87,7 +87,6 @@ export function TranscriptUpload({ onParsed }: TranscriptUploadProps) {
     }
   }, [onParsed]);
 
-  // Only calculate total credits for classes that were successfully extracted
   const totalCredits = parsedCourses.reduce((sum, course) => sum + course.credits, 0);
 
   return (
@@ -117,19 +116,10 @@ export function TranscriptUpload({ onParsed }: TranscriptUploadProps) {
           {status === "idle" && (
             <>
               <Upload className="h-12 w-12 mx-auto text-muted-foreground mb-4" />
-              <p className="text-foreground font-medium mb-1">
-                Drop your transcript here
-              </p>
-              <p className="text-sm text-muted-foreground mb-4">
-                or click to browse files
-              </p>
+              <p className="text-foreground font-medium mb-1">Drop your transcript here</p>
+              <p className="text-sm text-muted-foreground mb-4">or click to browse files</p>
               <label>
-                <input
-                  type="file"
-                  accept=".pdf"
-                  className="hidden"
-                  onChange={handleFileSelect}
-                />
+                <input type="file" accept=".pdf" className="hidden" onChange={handleFileSelect} />
                 <Button variant="outline" asChild>
                   <span>Select PDF File</span>
                 </Button>
@@ -140,54 +130,35 @@ export function TranscriptUpload({ onParsed }: TranscriptUploadProps) {
           {status === "parsing" && (
             <>
               <Loader2 className="h-12 w-12 mx-auto text-primary mb-4 animate-spin" />
-              <p className="text-foreground font-medium mb-1">
-                Parsing transcript...
-              </p>
-              <p className="text-sm text-muted-foreground">
-                Analyzing {file?.name}
-              </p>
+              <p className="text-foreground font-medium mb-1">Parsing transcript...</p>
+              <p className="text-sm text-muted-foreground">Analyzing {file?.name}</p>
             </>
           )}
 
           {status === "success" && (
             <>
               <Check className="h-12 w-12 mx-auto text-completed mb-4" />
-              <p className="text-foreground font-medium mb-1">
-                Successfully parsed!
-              </p>
-              <p className="text-sm text-muted-foreground">
-                Found {parsedCourses.length} courses ({totalCredits} credits)
-              </p>
+              <p className="text-foreground font-medium mb-1">Successfully parsed!</p>
+              <p className="text-sm text-muted-foreground">Found {parsedCourses.length} courses ({totalCredits} credits)</p>
             </>
           )}
 
           {status === "error" && (
             <>
               <AlertCircle className="h-12 w-12 mx-auto text-destructive mb-4" />
-              <p className="text-foreground font-medium mb-1">
-                Failed to parse transcript
-              </p>
-              <p className="text-sm text-muted-foreground mb-4">
-                Please try again with a valid UNT transcript PDF
-              </p>
-              <Button variant="outline" onClick={() => setStatus("idle")}>
-                Try Again
-              </Button>
+              <p className="text-foreground font-medium mb-1">Failed to parse transcript</p>
+              <p className="text-xs text-destructive/80 mb-4">{errorMessage || "Please try again with a valid UNT transcript PDF"}</p>
+              <Button variant="outline" onClick={() => setStatus("idle")}>Try Again</Button>
             </>
           )}
         </div>
 
         {status === "success" && parsedCourses.length > 0 && (
           <div className="space-y-2">
-            <h4 className="font-semibold text-sm text-muted-foreground uppercase tracking-wide">
-              Detected Courses
-            </h4>
+            <h4 className="font-semibold text-sm text-muted-foreground uppercase tracking-wide">Detected Courses</h4>
             <div className="grid gap-2 max-h-60 overflow-y-auto">
               {parsedCourses.map((course, index) => (
-                <div
-                  key={index}
-                  className="flex items-center justify-between p-3 bg-muted/50 rounded-lg"
-                >
+                <div key={index} className="flex items-center justify-between p-3 bg-muted/50 rounded-lg">
                   <div>
                     <p className="font-medium text-foreground">{course.code}</p>
                     <p className="text-sm text-muted-foreground">{course.name}</p>

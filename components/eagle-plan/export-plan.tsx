@@ -5,15 +5,7 @@ import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/com
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { cn } from "@/lib/utils";
-import {
-  Download,
-  FileText,
-  Calendar,
-  Check,
-  Loader2,
-  ExternalLink,
-  Copy,
-} from "lucide-react";
+import { Download, FileText, Calendar, Check, Loader2, ExternalLink, Copy } from "lucide-react";
 
 interface ExportFormat {
   id: string;
@@ -40,22 +32,6 @@ const exportFormats: ExportFormat[] = [
   },
 ];
 
-const samplePlanData = {
-  student: "Student",
-  major: "Computer Science",
-  expectedGraduation: "TBD",
-  totalCredits: 124,
-  completedCredits: 0,
-  semesters: [
-    {
-      name: "Upload Transcript",
-      courses: [
-        { code: "---", name: "Upload your transcript to see courses", credits: 0 },
-      ],
-    },
-  ],
-};
-
 export interface PlanData {
   student: string;
   major: string;
@@ -72,14 +48,21 @@ interface ExportPlanProps {
   planData?: PlanData | null;
 }
 
+const samplePlanData = {
+  student: "Student",
+  major: "Computer Science",
+  expectedGraduation: "TBD",
+  totalCredits: 124,
+  completedCredits: 0,
+  semesters: [{ name: "Upload Transcript", courses: [{ code: "---", name: "Upload your transcript to see courses", credits: 0 }] }],
+};
+
 export function ExportPlan({ planData }: ExportPlanProps) {
   const data = planData || samplePlanData;
-
   const [selectedFormat, setSelectedFormat] = useState<string | null>(null);
   const [exportStatus, setExportStatus] = useState<"idle" | "exporting" | "success">("idle");
   const [copiedLink, setCopiedLink] = useState(false);
 
-  // Helper function to trigger browser downloads
   const downloadFile = (content: string, mimeType: string, filename: string) => {
     const blob = new Blob([content], { type: mimeType });
     const url = URL.createObjectURL(blob);
@@ -126,7 +109,6 @@ export function ExportPlan({ planData }: ExportPlanProps) {
     return csv;
   };
 
-  // Generates a standard iCalendar format file
   const generateICS = () => {
     let ics = "BEGIN:VCALENDAR\nVERSION:2.0\nPRODID:-//EaglePlan//Degree Schedule//EN\n";
     
@@ -134,7 +116,7 @@ export function ExportPlan({ planData }: ExportPlanProps) {
       const term = sem.name.split(" ")[0]?.toLowerCase() || "";
       const year = sem.name.split(" ")[1] || new Date().getFullYear().toString();
       
-      let month = "08"; // Fall default
+      let month = "08"; 
       if (term === "spring") month = "01";
       if (term === "summer") month = "06";
       if (term === "winter") month = "12";
@@ -161,41 +143,12 @@ export function ExportPlan({ planData }: ExportPlanProps) {
       <CardHeader>
         <CardTitle className="flex items-center gap-2">
           <Download className="h-5 w-5 text-primary" />
-          Export Degree Plan
+          Export Schedule
         </CardTitle>
-        <CardDescription>
-          Download your degree plan in various formats or share it with your advisor
-        </CardDescription>
+        <CardDescription>Download your upcoming schedule</CardDescription>
       </CardHeader>
       <CardContent className="space-y-6">
-        
-        {/* Plan Summary */}
-        <div className="p-4 bg-muted/50 rounded-xl">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
-            <div>
-              <p className="text-2xl font-bold text-foreground">{data.major}</p>
-              <p className="text-sm text-muted-foreground">Major</p>
-            </div>
-            <div>
-              <p className="text-2xl font-bold text-primary">{data.expectedGraduation}</p>
-              <p className="text-sm text-muted-foreground">Expected Graduation</p>
-            </div>
-            <div>
-              <p className="text-2xl font-bold text-completed">{data.completedCredits}</p>
-              <p className="text-sm text-muted-foreground">Completed Credits</p>
-            </div>
-            <div>
-              <p className="text-2xl font-bold text-foreground">{Math.max(0, data.totalCredits - data.completedCredits)}</p>
-              <p className="text-sm text-muted-foreground">Remaining Credits</p>
-            </div>
-          </div>
-        </div>
-
-        {/* Export Formats */}
         <div>
-          <h4 className="font-semibold text-sm text-muted-foreground uppercase tracking-wide mb-3">
-            Export Formats
-          </h4>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {exportFormats.map((format) => (
               <button
@@ -224,9 +177,7 @@ export function ExportPlan({ planData }: ExportPlanProps) {
                       format.icon
                     )}
                   </div>
-                  <Badge variant="outline" className="text-xs">
-                    {format.extension}
-                  </Badge>
+                  <Badge variant="outline" className="text-xs">{format.extension}</Badge>
                 </div>
                 <h5 className="font-semibold text-foreground mb-1">{format.name}</h5>
                 <p className="text-sm text-muted-foreground">{format.description}</p>
@@ -235,52 +186,18 @@ export function ExportPlan({ planData }: ExportPlanProps) {
           </div>
         </div>
 
-        {/* Share Link */}
         <div className="p-4 bg-primary/5 rounded-xl border border-primary/20">
           <h4 className="font-semibold text-foreground mb-2 flex items-center gap-2">
-            <ExternalLink className="h-4 w-4 text-primary" />
-            Share with Advisor
+            <ExternalLink className="h-4 w-4 text-primary" /> Share with Advisor
           </h4>
-          <p className="text-sm text-muted-foreground mb-3">
-            Generate a shareable link to your degree plan for review
-          </p>
+          <p className="text-sm text-muted-foreground mb-3">Generate a shareable link to your schedule</p>
           <div className="flex gap-2">
             <div className="flex-1 p-3 bg-background rounded-lg border border-border text-sm text-muted-foreground truncate">
               https://eagleplan.unt.edu/share/abc123
             </div>
             <Button variant="outline" onClick={handleCopyLink}>
-              {copiedLink ? (
-                <>
-                  <Check className="h-4 w-4 mr-2" />
-                  Copied!
-                </>
-              ) : (
-                <>
-                  <Copy className="h-4 w-4 mr-2" />
-                  Copy
-                </>
-              )}
+              {copiedLink ? <><Check className="h-4 w-4 mr-2" /> Copied!</> : <><Copy className="h-4 w-4 mr-2" /> Copy</>}
             </Button>
-          </div>
-        </div>
-
-        {/* Preview */}
-        <div>
-          <h4 className="font-semibold text-sm text-muted-foreground uppercase tracking-wide mb-3">
-            Export Preview
-          </h4>
-          <div className="bg-card border border-border rounded-xl overflow-hidden">
-            <div className="bg-muted/50 px-4 py-2 border-b border-border flex items-center gap-2">
-              <div className="flex gap-1.5">
-                <div className="w-3 h-3 rounded-full bg-destructive/50" />
-                <div className="w-3 h-3 rounded-full bg-accent/50" />
-                <div className="w-3 h-3 rounded-full bg-completed/50" />
-              </div>
-              <span className="text-xs text-muted-foreground ml-2">degree_plan.csv</span>
-            </div>
-            <pre className="p-4 text-xs text-muted-foreground overflow-x-auto font-mono">
-              {generateCSV()}
-            </pre>
           </div>
         </div>
       </CardContent>

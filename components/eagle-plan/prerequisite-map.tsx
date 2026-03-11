@@ -50,7 +50,6 @@ const masterCurriculum: Course[] = [
 
 const statusConfig = {
   completed: { bg: "bg-completed/10", border: "border-completed", text: "text-completed", icon: Check },
-  // UPDATED: Now uses strict Tailwind blue utility classes
   available: { bg: "bg-blue-500/10", border: "border-blue-500", text: "text-blue-500", icon: ChevronRight },
   locked: { bg: "bg-muted", border: "border-border", text: "text-muted-foreground", icon: Lock },
   "in-progress": { bg: "bg-accent/10", border: "border-accent", text: "text-accent-foreground", icon: AlertTriangle },
@@ -117,16 +116,13 @@ export function PrerequisiteMap({
   };
 
   const highlightedCourses = hoveredCourse ? getPrerequisitePath(hoveredCourse) : [];
-  
   const activeCourse = selectedCourseId ? displayCourses.find(c => c.id === selectedCourseId) : null;
 
   return (
     <Card className="w-full">
       <CardHeader>
         <CardTitle className="flex items-center gap-2">Prerequisite Visualization</CardTitle>
-        <CardDescription>
-          Click a course to add it to your upcoming schedule.
-        </CardDescription>
+        <CardDescription>Click a course to add it to your upcoming schedule.</CardDescription>
         <div className="flex flex-wrap gap-3 mt-4">
           {Object.entries(statusConfig).map(([status, config]) => (
             <div key={status} className="flex items-center gap-2">
@@ -154,7 +150,7 @@ export function PrerequisiteMap({
                 className={cn(
                   "relative p-4 rounded-xl border-2 cursor-pointer transition-all duration-200",
                   config.bg, config.border,
-                  isHighlighted && "ring-2 ring-blue-500 ring-offset-2", // Updated ring to blue as well
+                  isHighlighted && "ring-2 ring-blue-500 ring-offset-2",
                   "hover:shadow-lg hover:scale-[1.02]"
                 )}
               >

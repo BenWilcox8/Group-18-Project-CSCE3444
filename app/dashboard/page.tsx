@@ -52,7 +52,7 @@ export default function DashboardPage() {
     if (!courses.length) return;
     setTranscriptCourses(courses);
 
-    const validPassingGrades = ["A+", "A", "A-", "B+", "B", "B-", "C+", "C", "C-", "D+"];
+    const validPassingGrades = ["A+", "A", "A-", "B+", "B", "B-", "C+", "C", "C-", "D+", "D", "D-", "P", "CR"];
     
     const earnedCredits = courses.reduce((sum, course) => {
       const isPassing = validPassingGrades.includes(course.grade.toUpperCase());
@@ -77,15 +77,10 @@ export default function DashboardPage() {
     if (!courses || courses.length === 0) return "Planned Next Semester";
 
     const termValues: Record<string, number> = {
-      "spring": 1,
-      "summer": 2,
-      "fall": 3,
-      "winter": 4
+      "spring": 1, "summer": 2, "fall": 3, "winter": 4
     };
 
-    let maxScore = 0;
-    let latestTerm = "";
-    let latestYear = 0;
+    let maxScore = 0; let latestTerm = ""; let latestYear = 0;
 
     courses.forEach(c => {
       const parts = c.semester.split(" ");
@@ -98,20 +93,13 @@ export default function DashboardPage() {
       if (year && termVal) {
         const score = year * 10 + termVal; 
         if (score > maxScore) {
-          maxScore = score;
-          latestTerm = term;
-          latestYear = year;
+          maxScore = score; latestTerm = term; latestYear = year;
         }
       }
     });
 
     if (maxScore === 0) return "Planned Next Semester";
-
-    if (latestTerm === "spring" || latestTerm === "summer") {
-      return `Fall ${latestYear}`;
-    } else {
-      return `Spring ${latestYear + 1}`;
-    }
+    return (latestTerm === "spring" || latestTerm === "summer") ? `Fall ${latestYear}` : `Spring ${latestYear + 1}`;
   };
 
   const exportPlanData = useMemo<PlanData | null>(() => {
@@ -133,7 +121,7 @@ export default function DashboardPage() {
     }
 
     return {
-      student: "Current Student",
+      student: "Prince Nnadi",
       major: "Computer Science",
       expectedGraduation: "Spring 2027", 
       totalCredits: 124,
@@ -147,13 +135,12 @@ export default function DashboardPage() {
   return (
     <div className="min-h-screen bg-background">
       <Header />
-
       <main className="pt-24 pb-12 px-4">
         <div className="container mx-auto max-w-7xl">
           
           <div className="mb-8">
             <Badge variant="outline" className="mb-2">Dashboard</Badge>
-            <h1 className="text-3xl font-bold text-foreground mb-2">Welcome Back, Student</h1>
+            <h1 className="text-3xl font-bold text-foreground mb-2">Welcome Back, Prince</h1>
             <p className="text-muted-foreground">Track your progress and manage your degree plan</p>
           </div>
 
@@ -193,10 +180,8 @@ export default function DashboardPage() {
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            
             <div className="lg:col-span-1 space-y-8">
               <TranscriptUpload onParsed={handleTranscriptParsed} />
-              
               <Card>
                 <CardHeader>
                   <CardTitle>Upcoming Schedule</CardTitle>
@@ -228,7 +213,6 @@ export default function DashboardPage() {
                   )}
                 </CardContent>
               </Card>
-
               <ExportPlan planData={exportPlanData} />
             </div>
 
@@ -240,7 +224,6 @@ export default function DashboardPage() {
                 onRemoveCourse={handleRemoveCourse}
               />
             </div>
-            
           </div>
         </div>
       </main>
