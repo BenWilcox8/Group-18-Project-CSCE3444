@@ -173,7 +173,7 @@ export function ExportPlan({ planData }: ExportPlanProps) {
         <div className="p-4 bg-muted/50 rounded-xl">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
             <div>
-              <p className="text font-bold text-foreground">{data.major}</p>
+              <p className="text-2xl font-bold text-foreground">{data.major}</p>
               <p className="text-sm text-muted-foreground">Major</p>
             </div>
             <div>
