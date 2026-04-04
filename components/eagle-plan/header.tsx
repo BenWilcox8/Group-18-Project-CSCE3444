@@ -28,7 +28,6 @@ export function Header() {
   }, [isDarkMode]);
 
   const navLinks = [
-    { href: "/", label: "Home" },
     { href: "/dashboard", label: "Dashboard" },
     { href: "/planner", label: "Course Planner" },
     { href: "/selector", label: "Selector" },
@@ -78,11 +77,12 @@ export function Header() {
             size="icon"
             onClick={() => setIsDarkMode(!isDarkMode)}
             className="rounded-full"
+            aria-label={isDarkMode ? "Switch to light mode" : "Switch to dark mode"}
           >
             {isDarkMode ? (
-              <Sun className="h-5 w-5" />
+              <Sun className="h-5 w-5" aria-hidden="true" />
             ) : (
-              <Moon className="h-5 w-5" />
+              <Moon className="h-5 w-5" aria-hidden="true" />
             )}
           </Button>
           <Button className="hidden md:flex">Get Started</Button>
@@ -91,11 +91,14 @@ export function Header() {
             size="icon"
             className="md:hidden"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            aria-label={isMobileMenuOpen ? "Close menu" : "Open menu"}
+            aria-expanded={isMobileMenuOpen}
+            aria-controls="mobile-menu"
           >
             {isMobileMenuOpen ? (
-              <X className="h-6 w-6" />
+              <X className="h-6 w-6" aria-hidden="true" />
             ) : (
-              <Menu className="h-6 w-6" />
+              <Menu className="h-6 w-6" aria-hidden="true" />
             )}
           </Button>
         </div>
@@ -103,7 +106,7 @@ export function Header() {
 
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
-        <div className="md:hidden bg-card border-t border-border mt-2">
+        <div id="mobile-menu" className="md:hidden bg-card border-t border-border mt-2">
           <nav className="container mx-auto px-4 py-4 flex flex-col gap-2">
             {navLinks.map((link) => (
               <Link
