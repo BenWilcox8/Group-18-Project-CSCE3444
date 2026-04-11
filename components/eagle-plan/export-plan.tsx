@@ -94,9 +94,24 @@ export function ExportPlan({ planData }: ExportPlanProps) {
   };
 
   const handleCopyLink = () => {
-    navigator.clipboard.writeText("https://eagleplan.unt.edu/share/abc123");
-    setCopiedLink(true);
-    setTimeout(() => setCopiedLink(false), 2000);
+    // Read the state that was exported from SemesterPlanner to the window object
+    const currentData = (window as any).currentPlannerState;
+    
+    if (currentData) {
+      // Serialize, encode, and build the real URL
+      const jsonString = JSON.stringify(currentData);
+      const encodedData = btoa(jsonString);
+      const shareUrl = `${window.location.origin}/planner?plan=${encodedData}`;
+      
+      navigator.clipboard.writeText(shareUrl);
+      setCopiedLink(true);
+      setTimeout(() => setCopiedLink(false), 2000);
+    } else {
+      // Fallback if data isn't ready
+      navigator.clipboard.writeText("https://eagleplan.unt.edu/share/abc123");
+      setCopiedLink(true);
+      setTimeout(() => setCopiedLink(false), 2000);
+    }
   };
 
   const generateCSV = () => {

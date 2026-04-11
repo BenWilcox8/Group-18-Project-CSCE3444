@@ -1,5 +1,5 @@
 "use client";
-
+import { useToast } from "@/hooks/use-toast";
 import React from "react"
 
 import { useState } from "react";
@@ -16,6 +16,7 @@ interface PlannedCourse {
   credits: number;
   isLocked: boolean;
   type: "major" | "minor" | "core" | "elective";
+  prerequisites?: string[];
 }
 
 interface Semester {
@@ -35,7 +36,7 @@ const initialSemesters: Semester[] = [
     season: "Fall",
     maxCredits: 18,
     courses: [
-      { id: "c1", code: "CSCE 3110", name: "Algorithms", credits: 3, isLocked: false, type: "major" },
+      { id: "c1", code: "CSCE 4110", name: "Algorithms", credits: 3, isLocked: false, type: "major" },
       { id: "c2", code: "MATH 2730", name: "Multivariable Calculus", credits: 3, isLocked: true, type: "major" },
       { id: "c3", code: "PHIL 1800", name: "Ethics", credits: 3, isLocked: false, type: "core" },
     ],
@@ -47,7 +48,7 @@ const initialSemesters: Semester[] = [
     season: "Spring",
     maxCredits: 18,
     courses: [
-      { id: "c4", code: "CSCE 3600", name: "Operating Systems", credits: 3, isLocked: false, type: "major" },
+      { id: "c4", code: "CSCE 3600", name: "Systems of Programming", credits: 3, isLocked: false, type: "major" },
       { id: "c5", code: "CSCE 3550", name: "Computer Networks", credits: 3, isLocked: false, type: "major" },
     ],
   },
@@ -58,7 +59,7 @@ const initialSemesters: Semester[] = [
     season: "Fall",
     maxCredits: 18,
     courses: [
-      { id: "c6", code: "CSCE 4110", name: "Design & Analysis of Algorithms", credits: 3, isLocked: false, type: "major" },
+      { id: "c6", code: "CSCE 4110", name: "Algorithms", credits: 3, isLocked: false, type: "major" },
     ],
   },
   {
@@ -72,9 +73,9 @@ const initialSemesters: Semester[] = [
 ];
 
 const availableCourses: PlannedCourse[] = [
-  { id: "ac1", code: "CSCE 4350", name: "Software Engineering", credits: 3, isLocked: false, type: "major" },
+  { id: "ac1", code: "CSCE 3444", name: "Software Engineering", credits: 3, isLocked: false, type: "major", prerequisites: ["CSCE 3110"] },
   { id: "ac2", code: "CSCE 4200", name: "Computer Architecture", credits: 3, isLocked: false, type: "major" },
-  { id: "ac3", code: "CSCE 4600", name: "Operating Systems II", credits: 3, isLocked: false, type: "elective" },
+  { id: "ac3", code: "CSCE 3600", name: "System of Programming", credits: 3, isLocked: false, type: "elective" },
   { id: "ac4", code: "ARTS 1301", name: "Art Appreciation", credits: 3, isLocked: false, type: "core" },
   { id: "ac5", code: "HIST 2610", name: "US History I", credits: 3, isLocked: false, type: "core" },
 ];
@@ -87,6 +88,7 @@ const typeColors = {
 };
 
 export function SemesterPlanner() {
+  const { toast } = useToast();
   const [semesters, setSemesters] = useState<Semester[]>(initialSemesters);
   const [draggedCourse, setDraggedCourse] = useState<PlannedCourse | null>(null);
   const [dragSource, setDragSource] = useState<string | null>(null);
@@ -101,9 +103,43 @@ export function SemesterPlanner() {
     e.preventDefault();
   };
 
+  const validatePrerequisites = (course: PlannedCourse, targetSemesterId: string) => {
+    if (!course.prerequisites || course.prerequisites.length === 0) return { isValid: true };
+
+    const targetIndex = semesters.findIndex(s => s.id === targetSemesterId);
+    if (targetIndex === -1) return { isValid: false, missing: ["Target semester not found"] };
+
+    const completedCourseCodes = new Set<string>();
+    for (let i = 0; i < targetIndex; i++) {
+      semesters[i].courses.forEach(c => completedCourseCodes.add(c.code));
+    }
+
+    const missingPrereqs = course.prerequisites.filter(prereq => !completedCourseCodes.has(prereq));
+
+    if (missingPrereqs.length > 0) {
+      return { isValid: false, missing: missingPrereqs };
+    }
+    return { isValid: true };
+  };
+
   const handleDrop = (targetSemesterId: string) => {
     if (!draggedCourse || !dragSource) return;
 
+  const validation = validatePrerequisites(draggedCourse, targetSemesterId);
+    
+    if (!validation.isValid) {
+      // ADD THIS LINE RIGHT HERE
+      alert("Validation Failed! Missing: " + validation.missing?.join(", "));
+
+      toast({
+        title: "Prerequisite Error",
+        description: `Cannot place ${draggedCourse.code} here. You are missing: ${validation.missing?.join(", ")} in prior semesters.`,
+        variant: "destructive",
+      });
+      setDraggedCourse(null);
+      setDragSource(null);
+      return;
+    }
     setSemesters((prev) => {
       const newSemesters = prev.map((semester) => {
         // Remove from source
