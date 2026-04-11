@@ -140,7 +140,7 @@ export default function DashboardPage() {
           
           <div className="mb-8">
             <Badge variant="outline" className="mb-2">Dashboard</Badge>
-            <h1 className="text-3xl font-bold text-foreground mb-2">Welcome Back, Prince</h1>
+            <h1 className="text-3xl font-bold text-foreground mb-2">Welcome Back, Student</h1>
             <p className="text-muted-foreground">Track your progress and manage your degree plan</p>
           </div>
 
